@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MenuMainActivity" />
+        <activity android:name=".admin_EventosActivity" />
+        <activity android:name=".crear_EventoActivity" />
+        <activity android:name=".Eliminar_EventoActivity"></activity>
     </application>
 
 </manifest>
