@@ -31,7 +31,7 @@
             android:layout_height="wrap_content" />
         <Button
             android:layout_marginTop="10dp"
-            android:id="@+id/btn_eliminar"
+            android:id="@+id/btn_eliminarEvent"
             android:textColor="@color/blanco"
             android:background="@color/colorPrimaryDark"
             android:text="Eliminar evento"

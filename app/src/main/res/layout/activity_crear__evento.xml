@@ -33,8 +33,7 @@
         <Spinner
             android:layout_columnWeight="2"
             android:id="@+id/tipo_Evento"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_width="180dp">
         </Spinner>
 
         <TextView
@@ -46,6 +45,7 @@
             android:layout_marginTop="10dp"
             android:layout_columnWeight="2"
             android:textSize="13dp"
+            android:layout_width="180dp"
             android:hint="Escriba el codigo"/>
         <TextView
             android:layout_marginTop="10dp"
@@ -56,6 +56,7 @@
             android:layout_marginTop="10dp"
             android:layout_columnWeight="2"
             android:textSize="13dp"
+            android:layout_width="180dp"
             android:hint="Escriba el titulo"/>
 
         <TextView
@@ -64,7 +65,7 @@
             android:text="Descripcion:"
             android:textSize="19dp"/>
         <EditText
-
+            android:layout_width="180dp"
             android:layout_marginTop="10dp"
             android:layout_columnWeight="2"
             android:textSize="13dp"
@@ -80,6 +81,7 @@
             android:layout_marginTop="10dp"
             android:layout_columnWeight="2"
             android:textSize="13dp"
+            android:layout_width="180dp"
             android:hint="Seleccione la fecha" />
 
         <TextView
@@ -88,14 +90,15 @@
             android:text="Monto:"
             android:textSize="19dp"/>
         <EditText
-
+            android:layout_width="180dp"
             android:layout_marginTop="10dp"
             android:layout_columnWeight="2"
             android:textSize="13dp"
             android:hint="Escriba el monto a pagar"/>
 
         <Button
-            android:layout_columnWeight="1"
+            android:id="@+id/nuevoEvent"
+            android:layout_columnWeight="4"
             android:layout_marginTop="15dp"
             android:layout_columnSpan="2"
             android:text="Crear"
