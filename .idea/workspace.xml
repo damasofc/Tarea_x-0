@@ -27,16 +27,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/DatePickerFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/DatePickerFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/Evento.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/Evento.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoDeportivo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoDeportivo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoMusical.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoMusical.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoReligioso.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoReligioso.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/CrearEvent_MusicalActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/CrearEvent_MusicalActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/admin_EventosActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/admin_EventosActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_crear__evento.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_crear__evento.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="ProyectoAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,14 +88,14 @@
       <file leaf-file-name="crear_EventoActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+            <state relative-caret-position="396">
+              <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
               <folding>
                 <element signature="e#1592#1600#0" expanded="true" />
                 <element signature="e#1834#1988#0" expanded="true" />
                 <element signature="e#1987#1988#0" expanded="true" />
-                <element signature="e#2028#3237#0" expanded="true" />
-                <element signature="e#3236#3237#0" expanded="true" />
+                <element signature="e#2028#3271#0" expanded="true" />
+                <element signature="e#3270#3271#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,9 +118,12 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/CrearEvent_MusicalActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="45" column="97" selection-start-line="45" selection-start-column="97" selection-end-line="45" selection-end-column="97" />
               <folding>
-                <element signature="e#927#949#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1015#1037#0" expanded="true" />
+                <element signature="e#1266#2719#0" expanded="true" />
+                <element signature="e#2718#2719#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1963,12 +1960,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_eliminar__evento.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_admin__eventos.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/admin_EventosActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/Eliminar_EventoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MenuMainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainClass.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoDeportivo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoMusical.java" />
@@ -1979,6 +1973,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_crear_event__musical.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/CrearEvent_MusicalActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/admin_EventosActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MenuMainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java" />
       </list>
     </option>
@@ -2820,14 +2817,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu_main.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -2877,34 +2866,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MenuMainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/admin_EventosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoReligioso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoDeportivo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="106" />
           <folding />
         </state>
       </provider>
@@ -2955,14 +2920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoMusical.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/DatePickerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
@@ -3001,26 +2958,71 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoDeportivo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/clases/EventoMusical.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/admin_EventosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/MenuMainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/CrearEvent_MusicalActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="45" column="97" selection-start-line="45" selection-start-column="97" selection-end-line="45" selection-end-column="97" />
           <folding>
-            <element signature="e#927#949#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1015#1037#0" expanded="true" />
+            <element signature="e#1266#2719#0" expanded="true" />
+            <element signature="e#2718#2719#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+        <state relative-caret-position="396">
+          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
           <folding>
             <element signature="e#1592#1600#0" expanded="true" />
             <element signature="e#1834#1988#0" expanded="true" />
             <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2028#3237#0" expanded="true" />
-            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#2028#3271#0" expanded="true" />
+            <element signature="e#3270#3271#0" expanded="true" />
           </folding>
         </state>
       </provider>

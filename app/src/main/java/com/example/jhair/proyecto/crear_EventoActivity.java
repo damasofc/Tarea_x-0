@@ -65,6 +65,7 @@ public class crear_EventoActivity extends AppCompatActivity {
                         double mont = Double.parseDouble(monto.getText().toString());
                         intent.putExtra("monto", mont);
                         startActivity(intent);
+                        finish();
                     }
                 }else{
                     Toast.makeText(crear_EventoActivity.this,"Porfavor llene todos los datos",Toast.LENGTH_LONG).show();
