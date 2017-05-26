@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.jhair.proyecto.crear_EventoActivity">
+
+    <TextView
+        android:id="@+id/nuevoMusical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Evento Musical"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Porfavor solo ingrese el tipo de musica en su evento, y luego el boton crear"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_below="@id/nuevoMusical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/gris"/>
+    <GridLayout
+        android:id="@+id/griLayout"
+        android:layout_margin="15dp"
+        android:columnCount="2"
+        android:layout_below="@id/mensaje"
+        android:rowCount="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_columnWeight="2"
+            android:id="@+id/view_tipoMusica"
+            android:textSize="19dp"
+            android:text="Tipo de Musica:" />
+        <Spinner
+            android:layout_columnWeight="2"
+            android:id="@+id/tipo_Musica"
+            android:layout_width="180dp">
+        </Spinner>
+
+        <Button
+            android:id="@+id/nuevoEventMusic"
+            android:layout_columnWeight="4"
+            android:layout_marginTop="100dp"
+            android:layout_columnSpan="2"
+            android:text="Crear"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"
+            />
+
+
+    </GridLayout>
+
+</RelativeLayout>

@@ -7,6 +7,7 @@ import android.support.v4.app.DialogFragment;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener{
 
@@ -21,11 +22,21 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         // Create a new instance of DatePickerDialog and return it
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
+    private Calendar sc;
+
+    public Calendar getSc() {
+        return sc;
+    }
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
         TextView tv1= (TextView) getActivity().findViewById(R.id.edit_date);
-        tv1.setText("Year: "+view.getYear()+" Month: "+view.getMonth()+" Day: "+view.getDayOfMonth());
+        sc = Calendar.getInstance();
+        sc.set(view.getYear(),view.getMonth(),view.getDayOfMonth());
+        Locale locale = Locale.getDefault();
+        String dia = sc.getDisplayName(Calendar.DAY_OF_WEEK,Calendar.SHORT,locale);
+        String mes = sc.getDisplayName(Calendar.MONTH,Calendar.SHORT,locale);
+        tv1.setText(dia.substring(0,mes.length()-1)+", "+ mes+" "+view.getDayOfMonth()+", "+view.getYear());
 
     }
 }

@@ -13,8 +13,8 @@ public class EventoDeportivo extends Evento {
     private ArrayList<String> listadoEquipo2;
     private String equipo2;
     public static final int CANTIDADMAXIMA = 20000;
-    public EventoDeportivo(int codigo, String titulo, Calendar fecha, double montoPagar,String deporte,String eq1, String eq2) {
-        super(codigo, titulo, fecha, montoPagar);
+    public EventoDeportivo(int codigo, String titulo, Calendar fecha, double montoPagar,String descripcion,String deporte,String eq1, String eq2) {
+        super(codigo, titulo, fecha, montoPagar,descripcion);
         tipoDeporte = Deportes.valueOf(deporte);
         equipo1 = eq1;
         equipo2 = eq2;
