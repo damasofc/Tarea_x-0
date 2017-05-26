@@ -14,7 +14,13 @@
         <activity android:name=".crear_EventoActivity" />
         <activity android:name=".Eliminar_EventoActivity" />
         <activity android:name=".CrearEvent_MusicalActivity" />
-        <activity android:name=".CrearEvent_DeportivoActivity"></activity>
+        <activity android:name=".CrearEvent_DeportivoActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
