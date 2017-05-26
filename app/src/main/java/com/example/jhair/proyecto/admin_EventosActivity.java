@@ -25,7 +25,6 @@ public class admin_EventosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(admin_EventosActivity.this,Eliminar_EventoActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         btn_crear = (Button) findViewById(R.id.btn_crear);
