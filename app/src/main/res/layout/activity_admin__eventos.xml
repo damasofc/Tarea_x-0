@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jhair.proyecto.admin_EventosActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Administracion de Eventos"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:textColor="@color/colorPrimary"/>
+    <LinearLayout
+        android:padding="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_crear"
+            android:textColor="@color/blanco"
+            android:background="@color/colorPrimaryDark"
+            android:text="Crear un evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_eliminarEvent"
+            android:textColor="@color/blanco"
+            android:background="@color/colorPrimaryDark"
+            android:text="Eliminar evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_editar"
+            android:layout_marginTop="10dp"
+            android:text="Editar un evento"
+            android:textColor="@color/blanco"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_verEvento"
+            android:layout_marginTop="10dp"
+            android:text="Ver Evento"
+            android:textColor="@color/blanco"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

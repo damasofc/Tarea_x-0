@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width ="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
@@ -23,7 +23,11 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteY="98dp"
-        tools:layout_editor_absoluteX="52dp" />
+        tools:layout_editor_absoluteX="52dp"
+        android:layout_marginTop="103dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
 
     <Button
         android:id="@+id/button"
@@ -31,14 +35,26 @@
         android:layout_height="wrap_content"
         android:text="Registrarse"
         tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteY="176dp"
+        android:layout_alignBaseline="@+id/btn_iniciar"
+        android:layout_alignBottom="@+id/btn_iniciar"
+        android:layout_toRightOf="@+id/btn_iniciar"
+        android:layout_toEndOf="@+id/btn_iniciar"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_iniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Entrar"
         tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteY="176dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_marginRight="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="155dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
