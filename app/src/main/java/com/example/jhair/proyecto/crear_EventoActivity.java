@@ -13,6 +13,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jhair.proyecto.clases.EventoReligioso;
+
+import java.util.Calendar;
+
 public class crear_EventoActivity extends AppCompatActivity {
     private Spinner tipoEvento;
     private EditText codigo;
@@ -29,7 +33,7 @@ public class crear_EventoActivity extends AppCompatActivity {
     }
     private void initComponents(){
         tipoEvento = (Spinner)findViewById(R.id.tipo_Evento);
-        codigo = (EditText)findViewById(R.id.editCodigo);
+        codigo = (EditText)findViewById(R.id.editCode);
         titulo = (EditText)findViewById(R.id.editTitulo);
         descripcion = (EditText)findViewById(R.id.editDescripcion);
         txt_fecha = (TextView) findViewById(R.id.edit_date);
@@ -54,18 +58,36 @@ public class crear_EventoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(comprobarEspaciosLlenos()) {
                     String selectItm = tipoEvento.getSelectedItem().toString();
-                    Intent intent;
-                    if (selectItm == "Musical") {
-                        intent = new Intent(crear_EventoActivity.this, CrearEvent_MusicalActivity.class);
-                        int cod = Integer.parseInt(codigo.getText().toString());
-                        intent.putExtra("Codigo", cod);
-                        intent.putExtra("Titulo", titulo.getText().toString());
-                        intent.putExtra("descripcion", descripcion.getText().toString());
-                        intent.putExtra("fecha", ((DatePickerFragment) newFragment).getSc());
-                        double mont = Double.parseDouble(monto.getText().toString());
-                        intent.putExtra("monto", mont);
-                        startActivity(intent);
-                        finish();
+                    Class cls = CrearEvent_MusicalActivity.class;
+                    if(selectItm.equals("Deportivo")){
+                        cls = CrearEvent_DeportivoActivity.class;
+                    }
+                    Intent intent = new Intent(crear_EventoActivity.this,cls);
+                    intent.putExtra("Codigo",Integer.parseInt(codigo.getText().toString()));
+                    intent.putExtra("Titulo", titulo.getText().toString());
+                    intent.putExtra("descripcion", descripcion.getText().toString());
+                    intent.putExtra("fecha", ((DatePickerFragment) newFragment).getSc());
+                    double mont = Double.parseDouble(monto.getText().toString());
+                    intent.putExtra("monto", mont);
+                    switch (selectItm) {
+                        case "Musical":
+                        case "Deportivo":
+                            startActivity(intent);
+                            finish();
+                            break;
+                        default:
+                            if (MainClass.existeEvento(Integer.parseInt(codigo.getText().toString()))) {
+                                Toast.makeText(crear_EventoActivity.this, "Este codigo de evento ya existe, escriba otro", Toast.LENGTH_SHORT).show();
+                            } else {
+                                EventoReligioso er = new EventoReligioso(Integer.parseInt(codigo.getText().toString()), titulo.getText().toString(), ((DatePickerFragment) newFragment).getSc(), mont, descripcion.getText().toString());
+                                MainClass.añadirEvento(er);
+                                Toast.makeText(crear_EventoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
+                                intent = new Intent(crear_EventoActivity.this, MenuMainActivity.class);
+                                startActivity(intent);
+                                finish();
+
+                            }
+                            break;
                     }
                 }else{
                     Toast.makeText(crear_EventoActivity.this,"Porfavor llene todos los datos",Toast.LENGTH_LONG).show();

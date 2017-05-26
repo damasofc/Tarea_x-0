@@ -1,6 +1,7 @@
 package com.example.jhair.proyecto;
 
 import android.content.Intent;
+import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,17 +34,17 @@ public class CrearEvent_MusicalActivity extends AppCompatActivity {
         nuevoMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int codigo = getIntent().getExtras().getInt("Codigo");
+                int code = getIntent().getExtras().getInt("Codigo");
                 String titulo = getIntent().getExtras().getString("Titulo");
                 String descript = getIntent().getExtras().getString("descripcion");
                 Calendar fecha = (Calendar) getIntent().getExtras().get("fecha");
                 double monto = getIntent().getExtras().getDouble("monto");
                 String tipodeMusica = tipoMusica.getSelectedItem().toString();
-                EventoMusical em = new EventoMusical(codigo,titulo,fecha,monto,descript,tipodeMusica);
+                EventoMusical em = new EventoMusical(code,titulo,fecha,monto,descript,tipodeMusica);
                 if(MainClass.existeEvento(em.getCodigo()) == false){
                     MainClass.añadirEvento(em);
                     Toast.makeText(CrearEvent_MusicalActivity.this,"Evento creado exitosamente",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(CrearEvent_MusicalActivity.this,MainActivity.class);
+                    Intent intent = new Intent(CrearEvent_MusicalActivity.this,MenuMainActivity.class);
                     startActivity(intent);
                     finish();
 
