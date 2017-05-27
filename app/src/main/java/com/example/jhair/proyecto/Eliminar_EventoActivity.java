@@ -30,8 +30,7 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
         cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO:por aca estoy programando la cancelacion de un evento, necesito agregar otros metodos.
-                int codEvent = Integer.parseInt(codigoCancel.getText().toString());
+                int codEvent = codigoCancel.length() > 0?Integer.parseInt(codigoCancel.getText().toString()):-1;
                 if(MainClass.existeEvento(codEvent)){
                     Evento eve = MainClass.buscarEvento(codEvent);
                     Calendar hoy = Calendar.getInstance();
@@ -65,7 +64,7 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    Toast.makeText(Eliminar_EventoActivity.this,"No hay ningun evento con ese codigo",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Eliminar_EventoActivity.this,codEvent == -1?"Porfavor escriba un codigo de evento":"No hay ningun evento con ese codigo",Toast.LENGTH_SHORT).show();
                 }
             }
         });
