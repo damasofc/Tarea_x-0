@@ -31,6 +31,7 @@ public class Ver_EventoActivity extends AppCompatActivity {
                     Intent intent = new Intent(Ver_EventoActivity.this,DatosEventoActivity.class);
                     intent.putExtra("codigo",codigoVer);
                     startActivity(intent);
+                    finish();
                 }
                 else{
                     Toast.makeText(Ver_EventoActivity.this,codigoVer == -1? "Porfavor escriba un codigo de evento":"Este evento no existe, porfavor escriba un codigo de evento existente",Toast.LENGTH_LONG).show();
@@ -38,5 +39,13 @@ public class Ver_EventoActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Ver_EventoActivity.this,admin_EventosActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 }

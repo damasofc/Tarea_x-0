@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Ver_EventoActivity" />
-        <activity android:name=".DatosEventoActivity">
+        <activity android:name=".DatosEventoActivity"
+            android:theme="@style/AppThemeDefault">
         </activity>
     </application>
 

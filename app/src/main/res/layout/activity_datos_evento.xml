@@ -13,26 +13,61 @@
         android:layout_width="match_parent"
         android:alpha="0.80"
         android:layout_height="150dp"
-        android:background="@color/colorPrimary"></Toolbar>
-    <TextView
-        android:layout_below="@id/toolBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tituloEvent"
-        android:text="Concierto"
-        android:textColor="@color/colorPrimary"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-smallcaps"/>
+        android:background="@color/colorPrimary">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp">
 
+
+            <TextView
+                android:layout_below="@id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tituloEvent"
+                android:text="Concierto"
+                android:textColor="@color/blanco"
+                android:textAlignment="textStart"
+                android:textSize="30dp"
+                android:paddingTop="10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-smallcaps"/>
+            <TextView
+                android:id="@+id/tipoEvento"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blanco"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:layout_marginTop="3dp"
+                android:text="Musical"/>
+            <TextView
+                android:id="@+id/fechaEvento"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blanco"
+                android:textAlignment="textStart"
+                android:textSize="13dp"
+                android:text="fecha de hoy"/>
+        </LinearLayout>
+
+    </Toolbar>
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButton_regresar"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_keyboard_backspace_white_24dp"
+        android:background="@android:color/transparent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
 </RelativeLayout>
