@@ -17,9 +17,14 @@
         <activity android:name=".CrearEvent_DeportivoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Ver_EventoActivity" />
+        <activity android:name=".DatosEventoActivity"
+            android:theme="@style/AppThemeDefault">
         </activity>
     </application>
 

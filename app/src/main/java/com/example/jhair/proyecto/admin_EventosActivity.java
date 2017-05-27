@@ -43,5 +43,14 @@ public class admin_EventosActivity extends AppCompatActivity {
 
             }
         });
+        btn_ver = (Button) findViewById(R.id.btn_verEvento);
+        btn_ver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(admin_EventosActivity.this, Ver_EventoActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
