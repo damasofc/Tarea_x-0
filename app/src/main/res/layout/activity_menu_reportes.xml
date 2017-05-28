@@ -16,8 +16,15 @@
         android:textColor="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_marginTop="21dp" />
+    <LinearLayout
+        android:padding="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <Button
+        <Button
         android:id="@+id/button_list_events"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +34,7 @@
         android:textColor="@color/blanco"
         android:layout_below="@+id/textView" />
 
-    <Button
+        <Button
         android:id="@+id/button_list_future_events"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +44,7 @@
         android:textColor="@color/blanco"
         android:layout_below="@+id/button_list_events" />
 
-    <Button
+        <Button
         android:id="@+id/button_canceled_events"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +54,7 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/blanco"/>
 
-    <Button
+        <Button
         android:id="@+id/button_date_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,7 +65,7 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/blanco"/>
 
-    <Button
+        <Button
         android:id="@+id/button_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +75,7 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/blanco"/>
 
-    <Button
+        <Button
         android:id="@+id/button_return_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,4 +84,5 @@
         android:text="Regresar al menu Principal"
         android:background="@color/colorAccent"
         android:textColor="@color/blanco"/>
+    </LinearLayout>
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.widget.Toast;
 public class MenuMainActivity extends AppCompatActivity {
     Button btn_admin;
     Button btn_salir;
+    Button btn_reportes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +21,19 @@ public class MenuMainActivity extends AppCompatActivity {
     public void initComponents(){
         btn_salir = (Button)findViewById(R.id.btn_salir);
         btn_admin = (Button)findViewById(R.id.btn_eventos);
+        btn_reportes = (Button) findViewById(R.id.btn_reportes);
         btn_admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuMainActivity.this,admin_EventosActivity.class);
                 startActivity(intent);
-
+            }
+        });
+        btn_reportes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuMainActivity.this, MenuReportes.class);
+                startActivity(intent);
             }
         });
         btn_salir.setOnClickListener(new View.OnClickListener() {

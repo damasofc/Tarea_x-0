@@ -3,43 +3,156 @@
 
     <item
         is-multidex="true"
-        jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-<<<<<<< HEAD
-        sha1="b5b04de37ca63d1ad9129fe18fcd60d6d8082772">
-=======
-        sha1="36259f76eed97767ba970eb18717c149a78e2957">
->>>>>>> Damaso
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/damasofc/.android/build-cache/b5e830c3650058289e9559f2b69d170fca964057/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_53fb54bb3b6bc6356d19ac6cd35bb0773da45a75/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/damasofc/.android/build-cache/80c2a113694a4d55b69aa554899abe8c877d5a75/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc717a1fcca48896cf77f4000c92920527d5c5c5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_acb37a6815d4efccb505051c50f146d96398d609/classes.dex" />
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_41f560e2fae0c47fd6222c61c5594adced7c3ad0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\48f411ed03ef013d5c9d8cbc15a14b1fc165c143\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f1910212e0803a0f6b4360080925fee79ec0acf3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_5b4c0d96b5ef280c532a79e888dccae03f8d2d96\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\27bb83d0e7d5e97c65309d5e7d8a0ff255fe20b3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_59c68111295294018d5d0f629a7292a7ef5024fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\b8dba1684705f70cbf79183a7be693102b3e0e63\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e24fa6b42e4cc7569acb906b531732045258f7e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\1ac5d862026564ce0eafc7c98b30626daca82204\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7248819c14d122cf1a6f4c0802a601334fd4898b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\ead1a119a255118aa08b90d602eb7dcbec9b9e38\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ee602c3d1d459e7da7ebebe1325f2042142aa981\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\62266d3bcb3cb862cfc19db8c8c233b26f6fcd41\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3d59ba8edae9e9f815e4fc0c1915c2d233ba5add\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="27e225b43ba8cdc2d2ce06c820ca7c539477bd03">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f189d6b485e941f2019cfc771a826c20f67d2674\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\8f22b31ad455fbbdd5e0bd3dfd8b338bcb782613\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e0c8011b90ebe3d6f5eace27ddaa0be00f6d7729\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\f3f8a771a737688a3eec77d0a75ea44b3c823f6e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_452caa20690da4dab8a0f4b88e67f67db9c1db0c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\4aaaf1227e69ffbd29b2fc1dfe73c7399b4202d1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c4576634ba8d00c197eed1d6e6408d5ead7879fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\6a9b0a9d6d39c85e7c0e945f5230d2b506773a09\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0762454996fe91f46121cfb8e0469aa416a8aba0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\032adc37104f2ec2c0432c5469bbb8182b308de0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_41e02b39f4734c2159417c8406f25e1bde2479a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\d24adc3987cddbe1840d842f8c3e2e74c5941982\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5f65c2d34994587541e47bf5ec67e126a8e03272\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\dee6bc9e3fcb8d3d076008561331ed3220426eca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_db1dcbba44ee9287f3dfcb13d5f0cce3af5b3a80\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_d620a8c2e783b37b96207b9bd25c86e3b7d69bb6\classes.dex" />
     </item>
 
 </items>

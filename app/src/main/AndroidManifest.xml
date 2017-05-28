@@ -23,9 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Ver_EventoActivity" />
-        <activity android:name=".DatosEventoActivity"
-            android:theme="@style/AppThemeDefault">
-        </activity>
+        <activity
+            android:name=".DatosEventoActivity"
+            android:theme="@style/AppThemeDefault"></activity>
+        <activity android:name=".MenuReportes"></activity>
     </application>
 
 </manifest>
