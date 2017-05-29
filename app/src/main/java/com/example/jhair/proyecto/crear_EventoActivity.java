@@ -109,4 +109,11 @@ public class crear_EventoActivity extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(crear_EventoActivity.this,admin_EventosActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

@@ -25,6 +25,7 @@ public class MenuMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuMainActivity.this,admin_EventosActivity.class);
                 startActivity(intent);
+                finish();
 
             }
         });

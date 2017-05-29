@@ -25,6 +25,7 @@ public class admin_EventosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(admin_EventosActivity.this,Eliminar_EventoActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         btn_crear = (Button) findViewById(R.id.btn_crear);
@@ -33,6 +34,7 @@ public class admin_EventosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(admin_EventosActivity.this, crear_EventoActivity.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -52,5 +54,11 @@ public class admin_EventosActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(admin_EventosActivity.this,MenuMainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

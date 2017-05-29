@@ -47,12 +47,21 @@ public class DatosEventoActivity extends AppCompatActivity {
         fechaEvento.setText(event.getFechaString());
         if(event instanceof EventoReligioso){
             layoutDatos.setBackgroundResource(R.drawable.religioso);
+            tipoEvento.setText("Religioso");
         }
         else if(event instanceof EventoDeportivo){
             layoutDatos.setBackgroundResource(R.drawable.deportivo);
+            tipoEvento.setText("Deportivo");
         }
         else{
             layoutDatos.setBackgroundResource(R.drawable.musical);
+            tipoEvento.setText("Musical");
         }
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(DatosEventoActivity.this,Ver_EventoActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
