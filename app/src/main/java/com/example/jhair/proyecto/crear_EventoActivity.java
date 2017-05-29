@@ -53,6 +53,7 @@ public class crear_EventoActivity extends AppCompatActivity {
 
             }
         });
+
         btn_crear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

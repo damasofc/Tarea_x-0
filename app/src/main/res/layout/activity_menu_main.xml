@@ -46,14 +46,15 @@
             android:background="@color/colorPrimaryDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/btn_salir"
-            android:layout_marginTop="10dp"
-            android:text="Salir"
-            android:textColor="@color/blanco"
-            android:background="@color/colorAccent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Salir"
+            android:textColor="@color/blanco" />
     </LinearLayout>
 
 </RelativeLayout>
