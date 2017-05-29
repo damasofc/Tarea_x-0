@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
+import com.example.jhair.proyecto.Usuarios.Validaciones;
+
 public class MainActivity extends AppCompatActivity {
     Button entrar;
     Button registrate;
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
     }
     private void initComponents(){
+        Usuario nw = new Usuario("admin","supersecreto","Administrador",20);
+        Validaciones.usuarioss.add(nw);
         entrar = (Button)findViewById(R.id.button2);
         registrate =(Button)findViewById(R.id.button);
 
