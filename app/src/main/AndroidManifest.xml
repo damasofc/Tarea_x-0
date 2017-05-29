@@ -25,17 +25,8 @@
         <activity android:name=".Ver_EventoActivity" />
         <activity
             android:name=".DatosEventoActivity"
-<<<<<<< HEAD
-            android:theme="@style/AppThemeDefault" />
-        <activity
-            android:name="res.layout.Registro"
-            android:label="@string/title_activity_registro"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Registro"></activity>
-=======
             android:theme="@style/AppThemeDefault"></activity>
         <activity android:name=".MenuReportes"></activity>
->>>>>>> Damaso
     </application>
 
 </manifest>
