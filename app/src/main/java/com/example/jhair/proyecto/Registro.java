@@ -63,6 +63,7 @@ public class Registro extends AppCompatActivity {
         registrarte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                
                 if(ComprobarEspacios()){
                     String selectusu=tipusuarios.getSelectedItem().toString();
 
