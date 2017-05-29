@@ -93,4 +93,11 @@ public class Registro extends AppCompatActivity {
             return false;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Registro.this,MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
