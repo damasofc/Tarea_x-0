@@ -7,7 +7,11 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
+<<<<<<< HEAD
         sha1="2c0b3478fca567a9f6cc3974fcbf4424e3edca03">
+=======
+        sha1="1f2a1d4f1dbae22517e50a0913872dc03f50d71b">
+>>>>>>> Damaso
         <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
     </item>
     <item
