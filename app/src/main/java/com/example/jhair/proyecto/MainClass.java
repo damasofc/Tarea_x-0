@@ -43,4 +43,12 @@ public class MainClass {
         }
         return null;
     }
+    public static Evento buscarEventoCancelado(int cod) {
+        for (Evento e : eventosCancelados) {
+            if (e.getCodigo() == cod) {
+                return e;
+            }
+        }
+        return null;
+    }
 }
