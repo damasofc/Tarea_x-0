@@ -25,36 +25,32 @@
         android:orientation="vertical">
         <Button
             android:id="@+id/btn_eventos"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
+            android:theme="@style/BotonRaised"
             android:text="Administracion de Eventos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
         <Button
             android:layout_marginTop="10dp"
             android:id="@+id/btn_usuarios"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
+            android:theme="@style/BotonRaised"
             android:text="Administracion de Usuarios"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
         <Button
             android:id="@+id/btn_reportes"
             android:layout_marginTop="10dp"
             android:text="Reportes"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
+            android:theme="@style/BotonRaised"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
 
         <Button
             android:id="@+id/btn_salir"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginTop="10dp"
-            android:background="@color/colorAccent"
-            android:text="Salir"
-            android:textColor="@color/blanco" />
+            android:theme="@style/BotonRaised"
+            android:text="Salir" />
     </LinearLayout>
 
 </RelativeLayout>

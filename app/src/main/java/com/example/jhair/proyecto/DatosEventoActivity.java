@@ -45,6 +45,9 @@ public class DatosEventoActivity extends AppCompatActivity {
         Evento event = MainClass.buscarEvento(codigo);
         tituloEvento.setText(event.getTitulo());
         fechaEvento.setText(event.getFechaString());
+        if(MainClass.buscarEventoCancelado(codigo) != null){
+
+        }
         if(event instanceof EventoReligioso){
             layoutDatos.setBackgroundResource(R.drawable.religioso);
             tipoEvento.setText("Religioso");
