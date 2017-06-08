@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/layoutDatosEvent"
     android:orientation="vertical"
-    android:background="@drawable/religioso"
+    android:background="@color/colorFondo"
     android:layout_height="match_parent"
     tools:context="com.example.jhair.proyecto.DatosEventoActivity">
 
@@ -22,13 +22,30 @@
             android:orientation="vertical"
             android:layout_marginLeft="0dp">
 
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="0dp">
             <ImageButton
                 android:id="@+id/imageButton_regresar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:src="@mipmap/ic_keyboard_backspace_white_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="200dp"
+                android:textColor="@color/blanco"
+                android:text="Codigo: " />
+            <TextView
+                android:id="@+id/codigo_Evento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="01234567"
+                android:textColor="@color/rojo" />
+        </LinearLayout>
 
             <TextView
                 android:layout_below="@id/toolBar"
@@ -37,7 +54,6 @@
                 android:id="@+id/tituloEvent"
                 android:text="Concierto"
                 android:textColor="@color/blanco"
-                android:textAlignment="textStart"
                 android:textSize="30dp"
                 android:paddingTop="10dp"
                 android:layout_marginTop="20dp"
@@ -49,7 +65,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/blanco"
-                android:textAlignment="textStart"
                 android:textSize="20dp"
                 android:layout_marginTop="3dp"
                 android:text="Musical"/>
@@ -60,24 +75,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/blanco"
-                android:textAlignment="textStart"
                 android:textSize="13dp"
                 android:text="fecha de hoy"/>
         </LinearLayout>
 
     </Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion: "
+        android:textColor="@color/blanco"
+        android:layout_marginLeft="10dp"
+        android:textSize="25dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/descripcionEvent"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/blanco"
+        android:background="@drawable/border_style"
+        android:text="Hola como estas mi nombre es Damaso y el tuyo como es : "
+        android:layout_marginLeft="170dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/montoPagar"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="70dp"
+        android:textAlignment="center"
+        android:text="Monto a pagar: "
+        android:padding="5dp"
+        android:textColor="@color/blanco"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/boton_redondo"/>
 
     <TextView
         android:textAlignment="center"
         android:id="@+id/txt_EventCancel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolBar"
-        android:text="Evento Cancelado"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text=""
         android:textColor="@color/rojo"
         android:textStyle="italic"
-        android:textSize="40dp"
-        android:fontFamily=""
-        android:paddingTop="350dp"/>
+        android:textSize="40sp"
+        android:paddingTop="0dp"/>
 
 </LinearLayout>

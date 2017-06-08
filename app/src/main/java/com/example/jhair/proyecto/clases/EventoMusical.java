@@ -10,6 +10,15 @@ public class EventoMusical extends Evento {
     ArrayList<String> staff;
     public static final double seguroGrama = 0.3;
     private Musica tipoMusica;
+
+    public Musica getTipoMusica() {
+        return tipoMusica;
+    }
+
+    public void setTipoMusica(Musica tipoMusica) {
+        this.tipoMusica = tipoMusica;
+    }
+
     public static final int CANTIDADMAXIMA = 25000;
     public EventoMusical(int codigo, String titulo, Calendar fecha, double montoPagar, String descripcion ,String musica) {
         super(codigo, titulo, fecha, montoPagar,descripcion);

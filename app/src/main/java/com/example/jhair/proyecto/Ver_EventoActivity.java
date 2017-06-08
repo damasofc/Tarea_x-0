@@ -27,7 +27,7 @@ public class Ver_EventoActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 int codigoVer = codigoEvent.length() > 0?Integer.parseInt(codigoEvent.getText().toString()):-1;
-                if(MainClass.existeEvento(codigoVer)){
+                if(MainClass.existeEvento(codigoVer) || MainClass.buscarEventoCancelado(codigoVer) != null){
                     Intent intent = new Intent(Ver_EventoActivity.this,DatosEventoActivity.class);
                     intent.putExtra("codigo",codigoVer);
                     startActivity(intent);
