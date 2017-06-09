@@ -7,8 +7,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="a2f39be17f25dd4a645d1b0a7c3c7f75c9329a70">
+        sha1="1840d7d3b5ff2ad824e7527242eadef59651bbb0">
         <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/damasofc/.android/build-cache/e5c1de6b69c34350669acaa6fcf9dc6edf2f2bfc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e7a60252f513b5cec74d2da34663e60ab30226e5/classes.dex" />
     </item>
     <item
         is-multidex="true"

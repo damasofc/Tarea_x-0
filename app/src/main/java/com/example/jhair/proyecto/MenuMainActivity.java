@@ -1,6 +1,7 @@
 package com.example.jhair.proyecto;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -52,6 +53,14 @@ public class MenuMainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(MenuMainActivity.this,"Debe dar click en salir, si desea cerrar sesion",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MenuMainActivity.this,"Debe dar click en salir, si desea cerrar sesion",Toast.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(R.id.linear_MenuPrincipal),"click en salir, si desea cerrar sesion",Snackbar.LENGTH_SHORT)
+                .setAction("Mas detalles", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                })
+                .show();
     }
 }

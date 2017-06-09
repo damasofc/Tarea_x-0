@@ -41,7 +41,7 @@ public class CrearEvent_MusicalActivity extends AppCompatActivity {
                 double monto = getIntent().getExtras().getDouble("monto");
                 String tipodeMusica = tipoMusica.getSelectedItem().toString();
                 EventoMusical em = new EventoMusical(code,titulo,fecha,monto,descript,tipodeMusica);
-                if(MainClass.existeEvento(em.getCodigo()) == false){
+                if(MainClass.existeEvento(em.getCodigo()) == false || MainClass.buscarEventoCancelado(em.getCodigo())== null){
                     MainClass.añadirEvento(em);
                     Toast.makeText(CrearEvent_MusicalActivity.this,"Evento creado exitosamente",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(CrearEvent_MusicalActivity.this,MenuMainActivity.class);

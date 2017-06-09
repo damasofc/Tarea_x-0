@@ -1,56 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:layout_height="match_parent"
     tools:context="com.example.jhair.proyecto.MenuMainActivity">
-
-    <TextView
-        android:id="@+id/titulo"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Menu Principal"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="32dp"
-        android:textColor="@color/colorPrimary"/>
-    <LinearLayout
-        android:padding="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/btn_eventos"
-            android:theme="@style/BotonRaised"
-            android:text="Administracion de Eventos"
-            android:layout_width="match_parent"
-            android:layout_height="65dp" />
-        <Button
-            android:layout_marginTop="10dp"
-            android:id="@+id/btn_usuarios"
-            android:theme="@style/BotonRaised"
-            android:text="Administracion de Usuarios"
-            android:layout_width="match_parent"
-            android:layout_height="65dp" />
-        <Button
-            android:id="@+id/btn_reportes"
-            android:layout_marginTop="10dp"
-            android:text="Reportes"
-            android:theme="@style/BotonRaised"
-            android:layout_width="match_parent"
-            android:layout_height="65dp" />
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_salir"
+        <TextView
+            android:id="@+id/titulo"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_marginTop="10dp"
-            android:theme="@style/BotonRaised"
-            android:text="Salir" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:text="Menu Principal"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:textColor="@color/colorPrimary"/>
+        <LinearLayout
+            android:id="@+id/linear_MenuPrincipal"
+            android:padding="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_eventos"
+                android:theme="@style/BotonRaised"
+                android:text="Administracion de Eventos"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_usuarios"
+                android:theme="@style/BotonRaised"
+                android:text="Administracion de Usuarios"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+            <Button
+                android:id="@+id/btn_reportes"
+                android:layout_marginTop="10dp"
+                android:text="Reportes"
+                android:theme="@style/BotonRaised"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/btn_salir"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:theme="@style/BotonRaised"
+                android:text="Salir" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -46,7 +46,7 @@ public class CrearEvent_DeportivoActivity extends AppCompatActivity {
                 //Termina,todos los atributos que vienen de crear_EventoActivity
                 String tiposport = tipoDeporte.getSelectedItem().toString();
                 if(comprobarEspaciosLlenos()){
-                    if(MainClass.existeEvento(codigo)){
+                    if(MainClass.existeEvento(codigo) || MainClass.buscarEventoCancelado(codigo)!= null){
                         Toast.makeText(CrearEvent_DeportivoActivity.this,"Este codigo de evento ya existe",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(CrearEvent_DeportivoActivity.this,crear_EventoActivity.class);
                         startActivity(intent);
