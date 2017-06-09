@@ -91,7 +91,12 @@ public class DatosEventoActivity extends AppCompatActivity {
             eventCancel.setText("Evento ya realizado");
         }
         if(event instanceof EventoReligioso){
-
+            montoPagar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(DatosEventoActivity.this,"Se cobran Lps. 2,000 mas, por el seguro de la grama:\n"+(event.getMontoPagar()-2000)+" + "+2000+"(Seguro) = Lps."+event.getMontoPagar(),Toast.LENGTH_LONG).show();
+                }
+            });
             tipoEvento.setText("Religioso");
         }
         else if(event instanceof EventoDeportivo){

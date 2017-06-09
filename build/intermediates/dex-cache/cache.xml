@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/damasofc/.android/build-cache/e5c1de6b69c34350669acaa6fcf9dc6edf2f2bfc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e7a60252f513b5cec74d2da34663e60ab30226e5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
