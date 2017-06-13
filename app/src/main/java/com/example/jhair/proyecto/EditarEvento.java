@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jhair.proyecto.clases.Evento;
 import com.example.jhair.proyecto.clases.EventoDeportivo;
 import com.example.jhair.proyecto.clases.EventoMusical;
+
+import java.util.Calendar;
 
 public class EditarEvento extends AppCompatActivity {
     TextView tipoEdtEvento;
@@ -29,6 +32,7 @@ public class EditarEvento extends AppCompatActivity {
         setContentView(R.layout.activity_editar_evento);
         initComponents();
     }
+    Evento eve;
     private void initComponents(){
         tipoEdtEvento = (TextView)findViewById(R.id.tipoEdtEvento);
         editarDate = (TextView)findViewById(R.id.editarDate);
@@ -37,8 +41,8 @@ public class EditarEvento extends AppCompatActivity {
         editarDescripcion = (EditText)findViewById(R.id.editarDescripcion);
         editarMonto = (EditText)findViewById(R.id.editarMonto);
         editarEvent = (Button)findViewById(R.id.editarEvent);
-        int codigo = (Integer) getIntent().getExtras().get("codEvent");
-        Evento eve = MainClass.buscarEvento(codigo);
+        final int codigo = (Integer) getIntent().getExtras().get("codEvent");
+        eve = MainClass.buscarEvento(codigo);
         setDatos(eve);
         editarDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,8 +50,33 @@ public class EditarEvento extends AppCompatActivity {
                 mostrarDatePicker();
             }
         });
+        editarEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                actualizarDatos(eve);
+                Toast.makeText(EditarEvento.this,"Datos Actualizados",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
 
+    }
+    private void actualizarDatos(Evento e){
+        int codigoEvent = (Integer) getIntent().getExtras().get("codEvent");
+        int cod = Integer.valueOf(editarCode.getText().toString());
+        String title = editarTitulo.getText().toString();
+        String descripcion = editarDescripcion.getText().toString();
+        Calendar date;
+        if(e.getFechaString().equals(editarDate.getText().toString())){}
+        else{
+            date = ((DatePickerFragment) nwFragment).getSc();
+            e.setFecha(date);
+        }
+        double monto = Double.parseDouble(editarMonto.getText().toString());
+        e.setCodigo(cod);
+        e.setTitulo(title);
+        e.setDescripcion(descripcion);
+        e.setMontoPagar(monto);
     }
 
     @Override
@@ -68,14 +97,16 @@ public class EditarEvento extends AppCompatActivity {
         }
         else if(e instanceof EventoMusical){
             tipoEdtEvento.setText("MUSICAL");
+            editarMonto.setText(String.valueOf(e.getMontoPagar()-((EventoMusical) e).getSeguroGrama()));
         }
         else{
             tipoEdtEvento.setText("RELIGIOSO");
+            editarMonto.setText(String.valueOf(e.getMontoPagar()-2000));
         }
     }
-    public DialogFragment newFragment;
+    public DialogFragment nwFragment;
     private void mostrarDatePicker(){
-        newFragment = new DatePickerFragment();
-        newFragment.show(getSupportFragmentManager(), "datePicker");
+        nwFragment = new DatePickerFragment();
+        nwFragment.show(getSupportFragmentManager(), "datePicker");
     }
 }

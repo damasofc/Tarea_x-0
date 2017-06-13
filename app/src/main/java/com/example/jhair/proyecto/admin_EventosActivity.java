@@ -34,6 +34,7 @@ public class admin_EventosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(admin_EventosActivity.this,Eliminar_EventoActivity.class);
+                intent.putExtra("FUENTE",2);
                 startActivity(intent);
                 finish();
             }
