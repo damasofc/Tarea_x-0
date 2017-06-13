@@ -42,6 +42,15 @@ public class admin_EventosActivity extends AppCompatActivity {
         btn_Editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
+                Este intent me dirige a la activity Eliminar evento, pero en esa actividad tengo un if
+                para comprobar cual es la fuente del parametro que le mando, si es 1 entonce viene del boton editar y cambia
+                los textos
+                 */
+                Intent intent = new Intent(admin_EventosActivity.this,Eliminar_EventoActivity.class);
+                intent.putExtra("FUENTE",1);
+                startActivity(intent);
+                finish();
 
             }
         });
