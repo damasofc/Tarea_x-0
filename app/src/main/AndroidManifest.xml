@@ -25,8 +25,9 @@
         <activity android:name=".Ver_EventoActivity" />
         <activity
             android:name=".DatosEventoActivity"
-            android:theme="@style/AppThemeDefault"></activity>
-        <activity android:name=".MenuReportes"></activity>
+            android:theme="@style/AppThemeDefault" />
+        <activity android:name=".MenuReportes" />
+        <activity android:name=".EditarEvento"></activity>
     </application>
 
 </manifest>

@@ -21,8 +21,7 @@ public class EventoMusical extends Evento {
 
     public static final int CANTIDADMAXIMA = 25000;
     public EventoMusical(int codigo, String titulo, Calendar fecha, double montoPagar, String descripcion ,String musica) {
-        super(codigo, titulo, fecha, montoPagar,descripcion);
-        montoPagar = montoPagar + (montoPagar*seguroGrama);
+        super(codigo, titulo, fecha, montoPagar + (montoPagar*seguroGrama),descripcion);
         tipoMusica = Musica.valueOf(musica);
         staff = new ArrayList<>();
     }

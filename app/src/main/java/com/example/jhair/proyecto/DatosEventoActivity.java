@@ -33,6 +33,8 @@ public class DatosEventoActivity extends AppCompatActivity {
     TextView codigo_Evento;
     TextView descripcion;
     Button montoPagar;
+    TextView txt_Dato1;
+    TextView edit_Dato1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,8 @@ public class DatosEventoActivity extends AppCompatActivity {
     }
 
     private void initComponents(){
+        txt_Dato1 = (TextView) findViewById(R.id.txt_Dato1);
+        edit_Dato1 = (TextView) findViewById(R.id.edit_Dato1);
         montoPagar = (Button)findViewById(R.id.montoPagar);
         descripcion = (TextView) findViewById(R.id.descripcionEvent);
         codigo_Evento = (TextView) findViewById(R.id.codigo_Evento);
@@ -89,6 +93,12 @@ public class DatosEventoActivity extends AppCompatActivity {
         }
         else if(event.getFecha().before(Calendar.getInstance())){
             eventCancel.setText("Evento ya realizado");
+            if(event instanceof EventoReligioso){
+                txt_Dato1.setText("Personas convertidas: ");
+                txt_Dato1.setTextSize(20);
+                edit_Dato1.setText(String.valueOf(((EventoReligioso) event).getPersonasConvertidas()));
+                edit_Dato1.setTextSize(20);
+            }
         }
         if(event instanceof EventoReligioso){
             montoPagar.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +111,9 @@ public class DatosEventoActivity extends AppCompatActivity {
         }
         else if(event instanceof EventoDeportivo){
 
-            tipoEvento.setText("Deportivo");
+            tipoEvento.setText("Deportivo - "+ ((EventoDeportivo) event).getTipoDeporte());
+            txt_Dato1.setText("Equipos: ");
+            edit_Dato1.setText(((EventoDeportivo) event).getEquipo1()+ " vrs "+((EventoDeportivo) event).getEquipo2());
         }
         else{
             tipoEvento.setText("Musical - "+((EventoMusical)event).getTipoMusica());
