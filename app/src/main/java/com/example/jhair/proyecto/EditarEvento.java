@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -109,10 +110,20 @@ public class EditarEvento extends AppCompatActivity {
         txtDato1.setText(" ");
         editarDato1.setText(" ");
         editarDato1.setEnabled(false);
+        //TODO: Tengo que editar este OnTouch Listener, para modificar el staff cuando sea un evento musical
+        editarDato1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Toast.makeText(EditarEvento.this, "Holacomo estas", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
         if(e instanceof EventoDeportivo){
             tipoEdtEvento.setText("DEPORTIVO");
         }
         else if(e instanceof EventoMusical){
+            txtDato1.setText("Staff: ");
+            editarDato1.setEnabled(true);
             tipoEdtEvento.setText("MUSICAL");
             editarMonto.setText(String.valueOf(e.getMontoPagar()-((EventoMusical) e).getSeguroGrama()));
         }
