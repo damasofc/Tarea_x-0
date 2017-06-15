@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.jhair.proyecto.clases.Evento;
 import com.example.jhair.proyecto.clases.EventoDeportivo;
 import com.example.jhair.proyecto.clases.EventoMusical;
+import com.example.jhair.proyecto.clases.EventoReligioso;
 
 import java.util.Calendar;
 
@@ -24,6 +25,8 @@ public class EditarEvento extends AppCompatActivity {
     TextView editarDate;
     EditText editarMonto;
     Button editarEvent;
+    TextView txtDato1;
+    EditText editarDato1;
 
 
     @Override
@@ -41,6 +44,8 @@ public class EditarEvento extends AppCompatActivity {
         editarDescripcion = (EditText)findViewById(R.id.editarDescripcion);
         editarMonto = (EditText)findViewById(R.id.editarMonto);
         editarEvent = (Button)findViewById(R.id.editarEvent);
+        txtDato1 = (TextView)findViewById(R.id.txtDato1);
+        editarDato1 = (EditText) findViewById(R.id.editarDato1);
         final int codigo = (Integer) getIntent().getExtras().get("codEvent");
         eve = MainClass.buscarEvento(codigo);
         setDatos(eve);
@@ -55,6 +60,7 @@ public class EditarEvento extends AppCompatActivity {
             public void onClick(View v) {
                 actualizarDatos(eve);
                 Toast.makeText(EditarEvento.this,"Datos Actualizados",Toast.LENGTH_LONG).show();
+                setDatos(eve);
 
             }
         });
@@ -77,6 +83,14 @@ public class EditarEvento extends AppCompatActivity {
         e.setTitulo(title);
         e.setDescripcion(descripcion);
         e.setMontoPagar(monto);
+        if(e instanceof EventoReligioso && e.getFecha().before(Calendar.getInstance())){
+            try {
+                int personasConver = Integer.valueOf(editarDato1.getText().toString());
+                ((EventoReligioso) e).setPersonasConvertidas(personasConver);
+            }catch (Exception ex){
+                ((EventoReligioso) e).setPersonasConvertidas(0);
+            }
+        }
     }
 
     @Override
@@ -92,6 +106,9 @@ public class EditarEvento extends AppCompatActivity {
         editarDescripcion.setText(e.getDescripcion());
         editarDate.setText(e.getFechaString());
         editarMonto.setText(String.valueOf(e.getMontoPagar()));
+        txtDato1.setText(" ");
+        editarDato1.setText(" ");
+        editarDato1.setEnabled(false);
         if(e instanceof EventoDeportivo){
             tipoEdtEvento.setText("DEPORTIVO");
         }
@@ -102,6 +119,11 @@ public class EditarEvento extends AppCompatActivity {
         else{
             tipoEdtEvento.setText("RELIGIOSO");
             editarMonto.setText(String.valueOf(e.getMontoPagar()-2000));
+            if(e.getFecha().before(Calendar.getInstance())) {
+                editarDato1.setEnabled(true);
+                txtDato1.setText("Convertidos: ");
+                editarDato1.setText(String.valueOf(((EventoReligioso)e).getPersonasConvertidas()));
+            }
         }
     }
     public DialogFragment nwFragment;
