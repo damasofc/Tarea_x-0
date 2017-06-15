@@ -120,10 +120,11 @@
             android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="DATO #1"
+            android:text="DATOg #1"
             android:textColor="@color/blanco"
             android:layout_marginLeft="1dp"
-            android:layout_marginTop="29dp"/>
+            android:layout_marginTop="29dp"
+            android:layout_marginBottom="13dp"/>
     </LinearLayout>
     <Button
         android:id="@+id/montoPagar"

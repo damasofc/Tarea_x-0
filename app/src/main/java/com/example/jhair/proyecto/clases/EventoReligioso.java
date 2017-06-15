@@ -18,4 +18,9 @@ public class EventoReligioso extends Evento {
     public void setPersonasConvertidas(int personasConvertidas) {
         this.personasConvertidas = personasConvertidas;
     }
+
+    @Override
+    public void setMontoPagar(double montoPagar) {
+        super.setMontoPagar(montoPagar + 2000);
+    }
 }

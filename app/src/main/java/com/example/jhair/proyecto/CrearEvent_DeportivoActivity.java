@@ -73,4 +73,11 @@ public class CrearEvent_DeportivoActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(CrearEvent_DeportivoActivity.this, crear_EventoActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
