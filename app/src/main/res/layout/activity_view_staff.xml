@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jhair.proyecto.ViewStaff">
+
+    <TextView
+        android:id="@+id/txtStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Staff"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorAccent"/>
+    <GridLayout
+        android:id="@+id/gridStaff"
+        android:layout_below="@id/txtStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
+        <EditText
+            android:layout_columnWeight="2"
+            android:id="@+id/edt_Staff1"
+            android:layout_width="140dp"
+            android:hint="1. Agregue nombre"/>
+        <EditText
+            android:id="@+id/edt_Staff2"
+            android:layout_columnWeight="2"
+            android:layout_width="150dp"
+            android:hint="2. Agregue nombre"
+            />
+        <EditText
+            android:layout_columnWeight="2"
+            android:id="@+id/edt_Staff3"
+            android:layout_width="140dp"
+            android:hint="3. Agregue nombre"/>
+        <EditText
+            android:id="@+id/edt_Staff4"
+            android:layout_columnWeight="2"
+            android:layout_width="150dp"
+            android:hint="4. Agregue nombre"
+            />
+        <EditText
+            android:layout_columnWeight="2"
+            android:id="@+id/edt_Staff5"
+            android:layout_width="140dp"
+            android:hint="5. Agregue nombre"/>
+        <EditText
+            android:id="@+id/edt_Staff6"
+            android:layout_columnWeight="2"
+            android:layout_width="150dp"
+            android:hint="6. Agregue nombre"
+            />
+        <EditText
+            android:layout_columnWeight="2"
+            android:id="@+id/edt_Staff7"
+            android:layout_width="140dp"
+            android:hint="7. Agregue nombre"/>
+        <EditText
+            android:id="@+id/edt_Staff8"
+            android:layout_columnWeight="2"
+            android:layout_width="150dp"
+            android:hint="8. Agregue nombre"
+            />
+        <EditText
+            android:layout_columnWeight="2"
+            android:id="@+id/edt_Staff9"
+            android:layout_width="140dp"
+            android:hint="9. Agregue nombre"/>
+        <EditText
+            android:id="@+id/edt_Staff10"
+            android:layout_columnWeight="2"
+            android:layout_width="150dp"
+            android:hint="10. Agregue nombre"
+            />
+        <EditText
+            android:layout_columnWeight="2"
+            android:id="@+id/edt_Staff11"
+            android:layout_width="140dp"
+            android:hint="11. Agregue nombre"/>
+
+
+
+    </GridLayout>
+    <Button
+        android:layout_below="@+id/gridStaff"
+        android:id="@+id/btn_Guardar"
+        android:theme="@style/BotonRaised"
+        android:text="Guardar"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+</RelativeLayout>

@@ -19,12 +19,20 @@ public class EventoMusical extends Evento {
         this.tipoMusica = tipoMusica;
     }
 
+    public void setTipoMusica(String tipoMusica){
+        this.tipoMusica = Musica.valueOf(tipoMusica);
+    }
+
     public static final int CANTIDADMAXIMA = 25000;
     public EventoMusical(int codigo, String titulo, Calendar fecha, double montoPagar, String descripcion ,String musica) {
         super(codigo, titulo, fecha, montoPagar + (montoPagar*0.3),descripcion);
         seguroGrama = seguroGrama * montoPagar;
         tipoMusica = Musica.valueOf(musica);
         staff = new ArrayList<>();
+    }
+
+    public ArrayList<String> getStaff() {
+        return staff;
     }
 
     @Override
