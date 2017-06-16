@@ -4,10 +4,16 @@ import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridLayout;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +34,10 @@ public class EditarEvento extends AppCompatActivity {
     Button editarEvent;
     TextView txtDato1;
     EditText editarDato1;
+    TextView txtDato2;
+    TextView editarDato2;
+    Spinner tipMusic;
+    ViewGroup grid;
 
 
     @Override
@@ -38,6 +48,7 @@ public class EditarEvento extends AppCompatActivity {
     }
     Evento eve;
     private void initComponents(){
+        grid = (ViewGroup)findViewById(R.id.gridEdtLayout);
         tipoEdtEvento = (TextView)findViewById(R.id.tipoEdtEvento);
         editarDate = (TextView)findViewById(R.id.editarDate);
         editarCode = (EditText)findViewById(R.id.editarCode);
@@ -47,9 +58,11 @@ public class EditarEvento extends AppCompatActivity {
         editarEvent = (Button)findViewById(R.id.editarEvent);
         txtDato1 = (TextView)findViewById(R.id.txtDato1);
         editarDato1 = (EditText) findViewById(R.id.editarDato1);
+        txtDato2 = (TextView)findViewById(R.id.txtDato2);
+        editarDato2 = (TextView)findViewById(R.id.editarDato2);
         final int codigo = (Integer) getIntent().getExtras().get("codEvent");
         eve = MainClass.buscarEvento(codigo);
-        setDatos(eve);
+        setDatos(eve,1);
         editarDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,10 +74,22 @@ public class EditarEvento extends AppCompatActivity {
             public void onClick(View v) {
                 actualizarDatos(eve);
                 Toast.makeText(EditarEvento.this,"Datos Actualizados",Toast.LENGTH_LONG).show();
-                setDatos(eve);
+                setDatos(eve,2);
 
             }
         });
+        if(eve instanceof EventoMusical){
+            editarDato2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(EditarEvento.this, ViewStaff.class);
+                    intent.putExtra("codigoEvento",eve.getCodigo());
+                    intent.putExtra("FUENTE",1);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
 
 
     }
@@ -101,7 +126,7 @@ public class EditarEvento extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    private void setDatos(Evento e){
+    private void setDatos(Evento e, int fuente){
         editarCode.setText(String.valueOf(e.getCodigo()));
         editarTitulo.setText(e.getTitulo());
         editarDescripcion.setText(e.getDescripcion());
@@ -110,22 +135,30 @@ public class EditarEvento extends AppCompatActivity {
         txtDato1.setText(" ");
         editarDato1.setText(" ");
         editarDato1.setEnabled(false);
-        //TODO: Tengo que editar este OnTouch Listener, para modificar el staff cuando sea un evento musical
-        editarDato1.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Toast.makeText(EditarEvento.this, "Holacomo estas", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
         if(e instanceof EventoDeportivo){
             tipoEdtEvento.setText("DEPORTIVO");
         }
         else if(e instanceof EventoMusical){
-            txtDato1.setText("Staff: ");
-            editarDato1.setEnabled(true);
             tipoEdtEvento.setText("MUSICAL");
             editarMonto.setText(String.valueOf(e.getMontoPagar()-((EventoMusical) e).getSeguroGrama()));
+            txtDato1.setText("Tipo de Musica: ");
+            txtDato2.setText("Staff: ");
+            editarDato2.setText("Editar Staff");
+            if(fuente == 1) {
+                grid.removeView(editarDato1);
+                tipMusic = new Spinner(EditarEvento.this);
+                grid.addView(tipMusic, grid.getChildCount() - 3);
+                //INICIO: datos para spinner
+                EventoMusical.Musica[] items = EventoMusical.Musica.values();
+                ArrayAdapter<EventoMusical.Musica> adapterEvents = new ArrayAdapter<EventoMusical.Musica>(this, android.R.layout.simple_spinner_item, items);
+                adapterEvents.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                tipMusic.setAdapter(adapterEvents);
+                //FIN: datos para spinner
+                tipMusic.setSelection(setTipoMusic(((EventoMusical) e).getTipoMusica()));
+                tipMusic.setLayoutParams(new GridLayout.LayoutParams(editarDato1.getLayoutParams()));
+            }else{
+                ((EventoMusical) e).setTipoMusica(tipMusic.getSelectedItem().toString());
+            }
         }
         else{
             tipoEdtEvento.setText("RELIGIOSO");
@@ -141,5 +174,15 @@ public class EditarEvento extends AppCompatActivity {
     private void mostrarDatePicker(){
         nwFragment = new DatePickerFragment();
         nwFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    private int setTipoMusic(EventoMusical.Musica tipo){
+        for(int i = 0 ; i < tipMusic.getCount(); i ++ ){
+            String item = tipMusic.getItemAtPosition(i).toString();
+            if(item.equals(tipo.toString())){
+                return i;
+            }
+        }
+        return -1;
     }
 }

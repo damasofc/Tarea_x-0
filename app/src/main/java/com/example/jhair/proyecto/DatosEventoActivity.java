@@ -128,6 +128,12 @@ public class DatosEventoActivity extends AppCompatActivity {
         }
         else{
             tipoEvento.setText("Musical - "+((EventoMusical)event).getTipoMusica());
+            txt_Dato1.setText("Ver Staff");
+            txt_Dato1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                }
+            });
             montoPagar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
