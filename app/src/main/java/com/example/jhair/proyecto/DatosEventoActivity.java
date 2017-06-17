@@ -132,6 +132,11 @@ public class DatosEventoActivity extends AppCompatActivity {
             txt_Dato1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent intent = new Intent(DatosEventoActivity.this,ViewStaff.class);
+                    intent.putExtra("FUENTE",2);
+                    intent.putExtra("codigoEvento",Integer.valueOf(codigo_Evento.getText().toString()));
+                    startActivity(intent);
+                    finish();
                 }
             });
             montoPagar.setOnClickListener(new View.OnClickListener() {

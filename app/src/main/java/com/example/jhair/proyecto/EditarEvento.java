@@ -137,6 +137,24 @@ public class EditarEvento extends AppCompatActivity {
         editarDato1.setEnabled(false);
         if(e instanceof EventoDeportivo){
             tipoEdtEvento.setText("DEPORTIVO");
+            txtDato1.setText("Deporte: ");
+            txtDato2.setText("Jugadores: ");
+            editarDato2.setText("Editar Jugadores");
+            if(fuente == 1) {
+                grid.removeView(editarDato1);
+                tipMusic = new Spinner(EditarEvento.this);
+                grid.addView(tipMusic, grid.getChildCount() - 3);
+                //INICIO: datos para spinner
+                EventoDeportivo.Deportes [] items = EventoDeportivo.Deportes.values();
+                ArrayAdapter<EventoDeportivo.Deportes> adapterEvents = new ArrayAdapter<EventoDeportivo.Deportes>(this, android.R.layout.simple_spinner_item, items);
+                adapterEvents.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                tipMusic.setAdapter(adapterEvents);
+                //FIN: datos para spinner
+                tipMusic.setSelection(setTipoDeporte(((EventoDeportivo) e).getTipoDeporte()));
+                tipMusic.setLayoutParams(new GridLayout.LayoutParams(editarDato1.getLayoutParams()));
+            }else{
+                ((EventoDeportivo) e).setTipoDeporte(tipMusic.getSelectedItem().toString());
+            }
         }
         else if(e instanceof EventoMusical){
             tipoEdtEvento.setText("MUSICAL");
@@ -177,6 +195,15 @@ public class EditarEvento extends AppCompatActivity {
     }
 
     private int setTipoMusic(EventoMusical.Musica tipo){
+        for(int i = 0 ; i < tipMusic.getCount(); i ++ ){
+            String item = tipMusic.getItemAtPosition(i).toString();
+            if(item.equals(tipo.toString())){
+                return i;
+            }
+        }
+        return -1;
+    }
+    private int setTipoDeporte(EventoDeportivo.Deportes tipo){
         for(int i = 0 ; i < tipMusic.getCount(); i ++ ){
             String item = tipMusic.getItemAtPosition(i).toString();
             if(item.equals(tipo.toString())){
