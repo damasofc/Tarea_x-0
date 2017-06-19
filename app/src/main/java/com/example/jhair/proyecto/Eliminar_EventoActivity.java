@@ -69,4 +69,11 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Eliminar_EventoActivity.this,admin_EventosActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
 import com.example.jhair.proyecto.Usuarios.UsuarioLimitado;
 import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.Usuarios.Validaciones;
@@ -63,35 +64,39 @@ public class Registro extends AppCompatActivity {
         registrarte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            if(usuario.getText().toString().equals("")||contra.getText().toString().equals("")||
+                        nomcompleto.getText().toString().equals("")||edad.getText().toString().equals("")){
+                Toast.makeText(Registro.this,"Debe llenar todos los campos",Toast.LENGTH_LONG).show();
 
-                if(ComprobarEspacios()){
-                    String selectusu=tipusuarios.getSelectedItem().toString();
+            }else {
+                boolean comprobar= Validaciones.comprobarusuarionormal(usuario.getText().toString());
+                    if(comprobar==true){
+                        Toast.makeText(Registro.this,"Jugador Ya existe",Toast.LENGTH_LONG).show();
+                    }else if(comprobar==false){
 
-                    switch (selectusu) {
-
-                        default:
-                            if (Validaciones.existeuser(usuario.getText().toString())==true) {
-                                Toast.makeText(Registro.this, "Este usuario ya existe, escriba otro", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(Registro.this, "Se creo el usuario "+tipusuarios.getSelectedItem(), Toast.LENGTH_SHORT).show();
-                            }
-                            break;
-
+                        Validaciones.crearusuarionormal(usuario.getText().toString(),contra.getText().toString());
+                        Toast.makeText(Registro.this,"Usuario  Creado",Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(Registro.this, "Llene todos los campos", Toast.LENGTH_SHORT).show();
 
-                }
+
+
+            }
+
+
+
+
+
 
             }
         });
 
     }
-    private boolean ComprobarEspacios(){
-        if(usuario.length()>0&&contra.length()>0&&nomcompleto.length()>0&&edad.length()>0){
-            return true;
-        }else {
-            return false;
-        }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Registro.this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

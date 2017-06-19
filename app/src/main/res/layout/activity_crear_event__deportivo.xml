@@ -47,7 +47,7 @@
             android:layout_columnWeight="2"
             android:textSize="13dp"
             android:layout_width="180dp"
-            android:hint="Escriba el nombre del equipo 1"/>
+            android:hint="nombre del equipo 1"/>
         <TextView
             android:layout_marginTop="10dp"
             android:layout_columnWeight="2"
@@ -59,7 +59,7 @@
             android:layout_columnWeight="2"
             android:textSize="13dp"
             android:layout_width="180dp"
-            android:hint="Escriba el nombre del equipo 2"/>
+            android:hint="nombre del equipo 2"/>
 
         <Button
             android:id="@+id/nuevoEventDeport"
