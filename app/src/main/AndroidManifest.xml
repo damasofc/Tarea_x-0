@@ -28,7 +28,8 @@
             android:theme="@style/AppThemeDefault" />
         <activity android:name=".MenuReportes" />
         <activity android:name=".EditarEvento" />
-        <activity android:name=".ViewStaff"></activity>
+        <activity android:name=".ViewStaff" />
+        <activity android:name=".EditarJugadores"></activity>
     </application>
 
 </manifest>

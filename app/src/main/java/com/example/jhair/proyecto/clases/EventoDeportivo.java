@@ -23,6 +23,20 @@ public class EventoDeportivo extends Evento {
 
     }
 
+    public ArrayList<String> getListadoEquipo1() {
+        return listadoEquipo1;
+    }
+
+    public ArrayList<String> getListadoEquipo2() {
+        return listadoEquipo2;
+    }
+    public void addJugador(int equipo,String name){
+        if(equipo == 1){
+            listadoEquipo1.add(name);
+        }else{
+            listadoEquipo2.add(name);
+        }
+    }
 
     public Deportes getTipoDeporte() {
         return tipoDeporte;

@@ -79,7 +79,7 @@ public class ViewStaff extends AppCompatActivity {
             intent.putExtra("codEvent", cod);
             startActivity(intent);
             finish();
-        }else{
+        }else if(fuente == 2){
             Intent intent = new Intent(ViewStaff.this, DatosEventoActivity.class);
             intent.putExtra("codigo", cod);
             startActivity(intent);
@@ -105,7 +105,6 @@ public class ViewStaff extends AppCompatActivity {
             }
         }
     }
-//TODO: estoy aca atascado porque no puedo guardar los datos del staff.
     private void setDatos(int fuente, int codigo){
             if(fuente == 2){
                 for (int i = 0; i < gridStaff.getChildCount(); i++) {

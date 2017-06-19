@@ -35,10 +35,12 @@ public class EditarEvento extends AppCompatActivity {
     TextView txtDato1;
     EditText editarDato1;
     TextView txtDato2;
+    TextView txtDato3;
+    TextView editarDato3;
     TextView editarDato2;
     Spinner tipMusic;
     ViewGroup grid;
-
+    int codigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class EditarEvento extends AppCompatActivity {
     }
     Evento eve;
     private void initComponents(){
+        txtDato3 = (TextView)findViewById(R.id.txtDato3);
+        editarDato3 = (TextView)findViewById(R.id.editarDato3);
         grid = (ViewGroup)findViewById(R.id.gridEdtLayout);
         tipoEdtEvento = (TextView)findViewById(R.id.tipoEdtEvento);
         editarDate = (TextView)findViewById(R.id.editarDate);
@@ -60,7 +64,7 @@ public class EditarEvento extends AppCompatActivity {
         editarDato1 = (EditText) findViewById(R.id.editarDato1);
         txtDato2 = (TextView)findViewById(R.id.txtDato2);
         editarDato2 = (TextView)findViewById(R.id.editarDato2);
-        final int codigo = (Integer) getIntent().getExtras().get("codEvent");
+        codigo = (Integer) getIntent().getExtras().get("codEvent");
         eve = MainClass.buscarEvento(codigo);
         setDatos(eve,1);
         editarDate.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +94,28 @@ public class EditarEvento extends AppCompatActivity {
                 }
             });
         }
+        else if(eve instanceof EventoDeportivo){
+            editarDato2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(EditarEvento.this,EditarJugadores.class);
+                    intent.putExtra("codEvent",codigo);
+                    startActivity(intent);
+                    finish();
+
+                }
+            });
+            editarDato3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(EditarEvento.this,CrearEvent_DeportivoActivity.class);
+                    intent.putExtra("FUENTE",2);
+                    intent.putExtra("Codigo",codigo);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
 
 
     }
@@ -105,7 +131,13 @@ public class EditarEvento extends AppCompatActivity {
             e.setFecha(date);
         }
         double monto = Double.parseDouble(editarMonto.getText().toString());
-        e.setCodigo(cod);
+        if(cod == codigoEvent){
+            e.setCodigo(cod);
+        }else if(MainClass.buscarEvento(cod) != null || MainClass.buscarEventoCancelado(cod) != null) {
+            Toast.makeText(EditarEvento.this,"Este codigo introducido ya existe",Toast.LENGTH_LONG).show();
+        }else{
+            e.setCodigo(cod);
+        }
         e.setTitulo(title);
         e.setDescripcion(descripcion);
         e.setMontoPagar(monto);
@@ -140,10 +172,12 @@ public class EditarEvento extends AppCompatActivity {
             txtDato1.setText("Deporte: ");
             txtDato2.setText("Jugadores: ");
             editarDato2.setText("Editar Jugadores");
+            txtDato3.setText("Editar Equipos:");
+            editarDato3.setText("Ir a equipos");
             if(fuente == 1) {
                 grid.removeView(editarDato1);
                 tipMusic = new Spinner(EditarEvento.this);
-                grid.addView(tipMusic, grid.getChildCount() - 3);
+                grid.addView(tipMusic, grid.getChildCount() - 5);
                 //INICIO: datos para spinner
                 EventoDeportivo.Deportes [] items = EventoDeportivo.Deportes.values();
                 ArrayAdapter<EventoDeportivo.Deportes> adapterEvents = new ArrayAdapter<EventoDeportivo.Deportes>(this, android.R.layout.simple_spinner_item, items);
