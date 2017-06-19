@@ -72,7 +72,9 @@ public class crear_EventoActivity extends AppCompatActivity {
                     intent.putExtra("monto", mont);
                     switch (selectItm) {
                         case "Musical":
+                            break;
                         case "Deportivo":
+                            intent.putExtra("FUENTE",1);
                             startActivity(intent);
                             finish();
                             break;

@@ -34,7 +34,9 @@ public class EventoMusical extends Evento {
     public ArrayList<String> getStaff() {
         return staff;
     }
-
+    public void addStaff(String s){
+        staff.add(s);
+    }
     @Override
     public void setMontoPagar(double montoPagar) {
         super.setMontoPagar(montoPagar + (montoPagar*0.3));
