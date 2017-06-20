@@ -35,6 +35,8 @@ public class DatosEventoActivity extends AppCompatActivity {
     Button montoPagar;
     TextView txt_Dato1;
     TextView edit_Dato1;
+    TextView txt_Dato2;
+    int codigo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,7 @@ public class DatosEventoActivity extends AppCompatActivity {
 
     private void initComponents(){
         //INICIO: TODOS LOS COMPONENTES
+        txt_Dato2 = (TextView)findViewById(R.id.txt_Dato2) ;
         txt_Dato1 = (TextView) findViewById(R.id.txt_Dato1);
         edit_Dato1 = (TextView) findViewById(R.id.edit_Dato1);
         montoPagar = (Button)findViewById(R.id.montoPagar);
@@ -65,7 +68,7 @@ public class DatosEventoActivity extends AppCompatActivity {
             }
         });
 
-        int codigo = getIntent().getExtras().getInt("codigo");
+        codigo = getIntent().getExtras().getInt("codigo");
         final Evento eve = MainClass.buscarEvento(codigo) == null?MainClass.buscarEventoCancelado(codigo):MainClass.buscarEvento(codigo);
         setDatos(eve);
         if(MainClass.buscarEventoCancelado(codigo) != null){
@@ -103,6 +106,7 @@ public class DatosEventoActivity extends AppCompatActivity {
     }
 
     private void setDatos(final Evento event){
+        txt_Dato2.setText("");
         tituloEvento.setText(event.getTitulo());
         codigo_Evento.setText(String.valueOf(event.getCodigo()));
         fechaEvento.setText(event.getFechaString());
@@ -121,6 +125,17 @@ public class DatosEventoActivity extends AppCompatActivity {
             tipoEvento.setText("Religioso");
         }
         else if(event instanceof EventoDeportivo){
+            txt_Dato2.setText("Lista de Jugadores");
+            txt_Dato2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DatosEventoActivity.this,EditarJugadores.class);
+                    intent.putExtra("fuente",2);
+                    intent.putExtra("codEvent",codigo);
+                    startActivity(intent);
+                    finish();
+                }
+            });
             tipoEvento.setText("Deportivo - "+ ((EventoDeportivo) event).getTipoDeporte());
             txt_Dato1.setText("Equipos: ");
             edit_Dato1.setText(((EventoDeportivo) event).getEquipo1()+ " vrs "+((EventoDeportivo) event).getEquipo2());

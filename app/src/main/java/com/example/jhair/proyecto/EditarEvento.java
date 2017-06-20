@@ -99,6 +99,7 @@ public class EditarEvento extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(EditarEvento.this,EditarJugadores.class);
+                    intent.putExtra("fuente",1);
                     intent.putExtra("codEvent",codigo);
                     startActivity(intent);
                     finish();
