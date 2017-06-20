@@ -13,10 +13,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
-=======
+
 import com.example.jhair.proyecto.Usuarios.Usuario;
->>>>>>> master
+
 import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
 import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.clases.EventoReligioso;
@@ -31,6 +30,7 @@ public class crear_EventoActivity extends AppCompatActivity {
     private TextView txt_fecha;
     private EditText monto;
     private Button btn_crear;
+    Usuario usu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,18 +89,18 @@ public class crear_EventoActivity extends AppCompatActivity {
                             } else {
                                 EventoReligioso er = new EventoReligioso(Integer.parseInt(codigo.getText().toString()), titulo.getText().toString(), ((DatePickerFragment) newFragment).getSc(), mont, descripcion.getText().toString());
                                 MainClass.añadirEvento(er);
-<<<<<<< HEAD
+
                                 if(MainActivity.usuarioActivo instanceof UsuarioAdmin){
 
                                 }else if(MainActivity.usuarioActivo instanceof UsuarioNormal)
-=======
-                                Usuario usu = MainActivity.usuarioActivo;
+
+                                usu = MainActivity.usuarioActivo;
                                 if(usu instanceof UsuarioAdmin){
                                     UsuarioAdmin.agregarEventoAdmin(er);
                                 }else if(usu instanceof UsuarioNormal){
                                     UsuarioNormal.agregarEventoNormal(er);
                                 }
->>>>>>> master
+
                                 Toast.makeText(crear_EventoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
                                 intent = new Intent(crear_EventoActivity.this, MenuMainActivity.class);
                                 startActivity(intent);
