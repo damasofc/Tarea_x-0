@@ -3,21 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="030aaee03540ae9587be19ec9c175110d8e20d70">
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
+        sha1="503661a2aa0acec2acba33b4da216fb0d8810878">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f189d6b485e941f2019cfc771a826c20f67d2674\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_acb37a6815d4efccb505051c50f146d96398d609/classes.dex" />
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_41f560e2fae0c47fd6222c61c5594adced7c3ad0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Julio\.android\build-cache\dbca69a8cbc65b0d7dc8dfbf772bb347303dd758\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_09434ae44fa8ba90ab5cec6bb0508b583ce2d953\classes.dex" />
     </item>
 
 </items>
