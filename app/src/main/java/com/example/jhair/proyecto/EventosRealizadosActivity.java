@@ -41,7 +41,7 @@ public class EventosRealizadosActivity extends AppCompatActivity {
         */
         EventosRealizados = new ArrayList<>();
         for(Evento e : MainClass.eventos) {
-            if(Calendar.getInstance().before(e.getFecha())) {
+            if(Calendar.getInstance().after(e.getFecha())) {
                 EventosRealizados.add(e);
                 montoTotal += e.getMontoPagar();
                 if(e instanceof EventoDeportivo) {

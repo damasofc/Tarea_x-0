@@ -42,7 +42,7 @@ public class EventosFuturosActivity extends AppCompatActivity {
         */
         EventosFuturos = new ArrayList<>();
         for(Evento e : MainClass.eventos) {
-            if(Calendar.getInstance().after(e.getFecha())) {
+            if(Calendar.getInstance().before(e.getFecha())) {
                 EventosFuturos.add(e);
                 montoTotal += e.getMontoPagar();
                 if(e instanceof EventoDeportivo) {
@@ -57,8 +57,8 @@ public class EventosFuturosActivity extends AppCompatActivity {
             }
         }
         ListAdapter pambisitoAdapter = new CustomAdapter(getApplicationContext(), EventosFuturos);
-        ListView ListEventosRealizados = (ListView) findViewById(R.id.List_eventos_realizados);
-        ListEventosRealizados.setAdapter(pambisitoAdapter);
+        ListView ListEventosFuturos = (ListView) findViewById(R.id.List_eventos_futuros);
+        ListEventosFuturos.setAdapter(pambisitoAdapter);
 
         //ahora a poner los contadores en los textViews
         DeportivosF.setText("Eventos deportivos: "+String.valueOf(contadorDeportivos));

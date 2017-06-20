@@ -28,7 +28,7 @@
             android:theme="@style/AppThemeDefault" />
         <activity android:name=".MenuReportes" />
         <activity android:name=".EditarEvento" />
-<<<<<<< HEAD
+
         <activity android:name=".EventosRealizadosActivity" />
         <activity android:name=".EventosFuturosActivity"></activity>
 =======
