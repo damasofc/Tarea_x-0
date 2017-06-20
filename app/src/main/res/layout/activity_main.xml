@@ -9,7 +9,7 @@
 
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/txtnombi"
             android:layout_width="347dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -26,14 +26,14 @@
             android:layout_alignParentEnd="true" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/txtpaswwi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:textAlignment="center"
             android:hint="Escriba su contrasena"
             android:inputType="textPassword"
-            android:layout_below="@+id/editText"
+            android:layout_below="@+id/txtnombi"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="14dp" />
@@ -48,7 +48,7 @@
         tools:layout_editor_absoluteX="220dp"
         tools:layout_editor_absoluteY="176dp"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/txtpaswwi"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
