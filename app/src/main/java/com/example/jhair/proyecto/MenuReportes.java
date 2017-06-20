@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuReportes extends AppCompatActivity {
-    Button ButtonList, ButtonListFuture, ButtonCancelEvent, ButtonDateInput, ButtonProfile,
+    Button ButtonListRealizados, ButtonListFuture, ButtonCancelEvent, ButtonDateInput, ButtonProfile,
             ButtonReturnMenu;
 
     @Override
@@ -18,7 +18,7 @@ public class MenuReportes extends AppCompatActivity {
     }
 
     public void initComponents() {
-        ButtonList = (Button) findViewById(R.id.button_list_events);
+        ButtonListRealizados = (Button) findViewById(R.id.button_list_events);
         ButtonListFuture = (Button) findViewById(R.id.button_list_future_events);
         ButtonCancelEvent = (Button) findViewById(R.id.button_canceled_events);
         ButtonDateInput = (Button) findViewById(R.id.button_date_input);
@@ -26,6 +26,24 @@ public class MenuReportes extends AppCompatActivity {
         ButtonReturnMenu = (Button) findViewById(R.id.button_return_menu);
 
         //a partir de aquí pondré lo que hacen los botones xD
+
+        ButtonListRealizados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuReportes.this, EventosRealizadosActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ButtonListFuture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuReportes.this, EventosFuturosActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         ButtonReturnMenu.setOnClickListener(new View.OnClickListener() {
             @Override

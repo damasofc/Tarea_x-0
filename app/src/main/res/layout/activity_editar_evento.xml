@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.jhair.proyecto.crear_EventoActivity"
+    android:id="@+id/layoutEditar">
+
+    <TextView
+        android:id="@+id/titulo_nuevo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Evento"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/colorAccent"/>
+
+    <GridLayout
+        android:id="@+id/gridEdtLayout"
+        android:layout_margin="15dp"
+        android:columnCount="2"
+        android:layout_below="@id/titulo_nuevo"
+        android:rowCount="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_columnWeight="2"
+            android:id="@+id/view_tipoEvento"
+            android:textSize="19dp"
+            android:text="Tipo de evento:" />
+        <TextView
+            android:layout_columnWeight="2"
+            android:id="@+id/tipoEdtEvento"
+            android:textSize="20dp"
+            android:layout_marginLeft="17dp"
+            android:text="Evento"
+            android:layout_width="180dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:text="Codigo:"
+            android:textSize="19dp"/>
+        <EditText
+            android:id="@+id/editarCode"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="13dp"
+            android:layout_width="180dp"
+            android:hint="Escriba el codigo"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:text="Titulo:"
+            android:textSize="19dp"/>
+        <EditText
+            android:id="@+id/editarTitulo"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="13dp"
+            android:layout_width="180dp"
+            android:hint="Escriba el titulo"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:text="Descripcion:"
+            android:textSize="19dp"/>
+        <EditText
+            android:id="@+id/editarDescripcion"
+            android:layout_width="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="13dp"
+            android:hint="Escriba la descripcion"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:text="Fecha:"
+            android:textSize="19dp"/>
+        <TextView
+            android:id="@+id/editarDate"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="13dp"
+            android:layout_width="180dp"
+            android:hint="Seleccione la fecha" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:text="Monto:"
+            android:textSize="19dp"/>
+        <EditText
+            android:inputType="number"
+            android:id="@+id/editarMonto"
+            android:layout_width="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="13dp"
+            android:hint="Escriba el monto a pagar"/>
+        <TextView
+            android:id="@+id/txtDato1"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:text="Dato1:"
+            android:textSize="19dp"/>
+        <EditText
+            android:inputType="number"
+            android:id="@+id/editarDato1"
+            android:layout_width="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="13dp"
+            android:hint=""/>
+        <TextView
+            android:id="@+id/txtDato3"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="19dp"/>
+        <TextView
+            android:inputType="number"
+            android:id="@+id/editarDato3"
+            android:layout_width="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="17dp"
+            android:hint=""/>
+        <TextView
+            android:id="@+id/txtDato2"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="19dp"/>
+        <TextView
+            android:inputType="number"
+            android:id="@+id/editarDato2"
+            android:layout_width="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_columnWeight="2"
+            android:textSize="17dp"
+            android:hint=""/>
+
+
+        <Button
+            android:id="@+id/editarEvent"
+            android:layout_columnWeight="4"
+            android:layout_marginTop="15dp"
+            android:layout_columnSpan="2"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:text="Editar"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"
+            />
+
+
+
+    </GridLayout>
+
+</RelativeLayout>

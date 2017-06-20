@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="blanco">#ffff</color>
     <color name="gris">#8D8888</color>
+    <color name="rojo">#FF0000</color>
+    <color name="verde">#24f411</color>
+    <color name="morado">#650b7e</color>
+    <color name="anaranjado">#a75d20</color>
+    <color name="colorFondo">#29374b</color>
 </resources>

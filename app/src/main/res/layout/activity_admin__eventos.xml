@@ -16,42 +16,46 @@
         android:textSize="32dp"
         android:textColor="@color/colorPrimary"/>
     <LinearLayout
-        android:padding="70dp"
+        android:padding="30dp"
+        android:id="@+id/linear"
         android:layout_marginTop="20dp"
         android:layout_below="@id/titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
-            android:id="@+id/btn_crear"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
-            android:text="Crear un evento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
         <Button
             android:layout_marginTop="10dp"
             android:id="@+id/btn_eliminarEvent"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
+            android:theme="@style/BotonRaised"
             android:text="Eliminar evento"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
         <Button
             android:id="@+id/btn_editar"
             android:layout_marginTop="10dp"
             android:text="Editar un evento"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
+            android:theme="@style/BotonRaised"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
         <Button
             android:id="@+id/btn_verEvento"
             android:layout_marginTop="10dp"
             android:text="Ver Evento"
-            android:textColor="@color/blanco"
-            android:background="@color/colorPrimaryDark"
+            android:theme="@style/BotonRaised"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/fab_btn"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_add_white_24dp"
+        android:layout_below="@+id/linear"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp" />
 </RelativeLayout>
