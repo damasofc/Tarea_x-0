@@ -7,8 +7,13 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
+<<<<<<< HEAD
         sha1="503661a2aa0acec2acba33b4da216fb0d8810878">
         <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f189d6b485e941f2019cfc771a826c20f67d2674\classes.dex" />
+=======
+        sha1="9c146ca5a37b6eaced294ed0b6fbaf1ff26965f9">
+        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
+>>>>>>> c809736c59ccd0afa608b0dbf63a9cab5aafe7dd
     </item>
     <item
         is-multidex="true"
