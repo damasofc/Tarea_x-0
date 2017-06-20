@@ -3,26 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-<<<<<<< HEAD
-        sha1="a65b9214b37ef4e374b8bc3bc54abba137fe87d7">
+        sha1="2fe1ede6a56cbb70fb5ea322d1536143050992b4">
         <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_acb37a6815d4efccb505051c50f146d96398d609/classes.dex" />
-=======
-        sha1="a2fd8ca843064c3d6eed236c71d1f8b701e38ffa">
-        <dex dex="C:\Juegos flash y cosas random\Unitec\Programacion ll\Proyecto\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f189d6b485e941f2019cfc771a826c20f67d2674\classes.dex" />
->>>>>>> master
     </item>
 
 </items>
