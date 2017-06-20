@@ -23,6 +23,7 @@ public class EditarJugadores extends AppCompatActivity {
     EditText [][] arr = new EditText[2][10];
     int codigo;
     Button guardar;
+    EventoDeportivo eve;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +34,14 @@ public class EditarJugadores extends AppCompatActivity {
         guardar = (Button)findViewById(R.id.guardarBtn);
         codigo = getIntent().getExtras().getInt("codEvent");
         jugadoresGridLayout = (GridLayout) findViewById(R.id.jugadoresGridLayout);
-        EventoDeportivo eve =(EventoDeportivo) MainClass.buscarEvento(codigo);
+        eve =(EventoDeportivo) MainClass.buscarEvento(codigo);
         jugadors1 = eve.getListadoEquipo1();
         jugadors2 = eve.getListadoEquipo2();
         if(eve.getTipoDeporte().equals(EventoDeportivo.Deportes.TENIS)){
             for(int i =jugadoresGridLayout.getChildCount()-1; i > 5;i--){
                 if(i == jugadoresGridLayout.getChildCount()-1){continue;}
                 jugadoresGridLayout.removeViewAt(i);
+
             }
         }
         almacenarEdt();
@@ -61,7 +63,7 @@ public class EditarJugadores extends AppCompatActivity {
     private void almacenarEdt(){
         int x1 = 0;
         int x2 = 0;
-        for(int i =0; i < jugadoresGridLayout.getChildCount()-1;i++){
+        for(int i =0; i < jugadoresGridLayout.getChildCount();i++){
             try {
                 EditText tx = (EditText) jugadoresGridLayout.getChildAt(i);
                 String t = tx.getText().toString();
@@ -81,15 +83,25 @@ public class EditarJugadores extends AppCompatActivity {
 
         if(equipo == 1){
             if(jugadors1.size() == 0){
-
+                for(int i = 0; i < arr.length;i++) {
+                    for (int m = 0; m < arr[i].length; m++) {
+                        if(i==0){
+                            if(arr[i][m] == null){continue;}
+                            arr[i][m].setText("");
+                            arr[i][m].setHint((m+1)+".Jugador1");
+                        }
+                    }
+                }
             }
             else{
                 for(int i = 0; i < arr.length;i++) {
-                    int x = jugadors1.size()-1;
+                    int x = 0;
                     for (int m = 0; m < arr[i].length; m++) {
                         if(i==0){
-                            arr[i][m].setText(jugadors1.get(x));
-                            x--;
+                            if(x>jugadors1.size()-1 || arr[i][m]==null){continue;}
+                            arr[i][m].setText("");
+                            arr[i][m].setHint(jugadors1.get(x));
+                            x++;
                         }
                     }
                 }
@@ -97,15 +109,25 @@ public class EditarJugadores extends AppCompatActivity {
             }
         }else{
             if(jugadors2.size() == 0){
-
+                for(int i = 0; i < arr.length;i++) {
+                    for (int m = 0; m < arr[i].length; m++) {
+                        if(i==1){
+                            if(arr[i][m] == null){continue;}
+                            arr[i][m].setText("");
+                            arr[i][m].setHint((m+1)+".Jugador");
+                        }
+                    }
+                }
             }
             else{
                 for(int i = 0; i < arr.length;i++) {
-                    int x = jugadors2.size();
+                    int x = 0;
                     for (int m = 0; m < arr[i].length; m++) {
                         if(i==1){
-                            arr[i][m].setText(jugadors2.get(x));
-                            x--;
+                            if(x>jugadors2.size()-1|| arr[i][m]==null){continue;}
+                            arr[i][m].setText("");
+                            arr[i][m].setHint(jugadors2.get(x));
+                            x++;
                         }
                     }
                 }
@@ -119,9 +141,18 @@ public class EditarJugadores extends AppCompatActivity {
             for(int m = 0; m <arr[i].length; m++){
                 if(arr[i][m] == null){continue;}
                 if(i == 0) {
-                    jugadors1.add(arr[i][m].getText().toString());
+                    String name = "";
+                    if(arr[i][m].getText().toString().length() > 0) {
+                        name = arr[i][m].getText().toString();
+
+                    }else{name = arr[i][m].getHint().toString();}
+                    eve.addJugador(1,name);
                 }else{
-                    jugadors2.add(arr[i][m].getText().toString());
+                    String name = "";
+                    if(arr[i][m].getText().toString().length() > 0) {
+                        name = arr[i][m].getText().toString();
+                    }else{name = arr[i][m].getHint().toString();}
+                    eve.addJugador(2,name);
                 }
             }
         }
