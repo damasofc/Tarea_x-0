@@ -27,6 +27,7 @@ public class EventoDeportivo extends Evento {
         return listadoEquipo1;
     }
 
+
     public ArrayList<String> getListadoEquipo2() {
         return listadoEquipo2;
     }
