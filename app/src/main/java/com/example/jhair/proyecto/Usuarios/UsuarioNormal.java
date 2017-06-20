@@ -1,5 +1,7 @@
 package com.example.jhair.proyecto.Usuarios;
 
+import com.example.jhair.proyecto.clases.Evento;
+
 import java.util.ArrayList;
 
 /**
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 
 public class UsuarioNormal extends Usuario {
 
-    private ArrayList<String> eventosnormales;
+    public static ArrayList<Evento> eventosnormales;
 
 
     public UsuarioNormal(String usuario, String contra, String nomcompleto, int edad) {
@@ -16,6 +18,9 @@ public class UsuarioNormal extends Usuario {
 
     }
 
+    public static void agregarEventoNormal(Evento e){
+        eventosnormales.add(e);
+    }
 
 
 

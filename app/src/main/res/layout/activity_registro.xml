@@ -22,29 +22,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_alignLeft="@+id/etedad"
-        android:layout_alignStart="@+id/etedad"
         android:layout_below="@+id/textView"
         android:layout_marginTop="25dp"
+
         android:ems="10"
         android:hint="Escriba Usuario"
         android:inputType="textPersonName"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_alignLeft="@+id/etnomc"
+        android:layout_alignStart="@+id/etnomc"
+        android:layout_alignRight="@+id/etedad"
+        android:layout_alignEnd="@+id/etedad" />
 
     <EditText
         android:id="@+id/etpassw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/etedad"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
         android:layout_marginTop="38dp"
         android:ems="10"
         android:hint="Escriba Contrasena"
         android:inputType="textPassword"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_below="@+id/etedad"
+        android:layout_alignLeft="@+id/etedad"
+        android:layout_alignStart="@+id/etedad"
+        android:layout_alignRight="@+id/etedad"
+        android:layout_alignEnd="@+id/etedad" />
 
     <Button
         android:id="@+id/btregist"
@@ -72,37 +75,41 @@
         android:id="@+id/etnomc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etnom"
-        android:layout_alignStart="@+id/etnom"
-        android:layout_below="@+id/etnom"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="Escriba Nombre"
         android:inputType="textPersonName"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_below="@+id/etnom"
+        android:layout_alignLeft="@+id/etedad"
+        android:layout_alignStart="@+id/etedad"
+        android:layout_alignRight="@+id/etedad"
+        android:layout_alignEnd="@+id/etedad" />
 
     <EditText
         android:id="@+id/etedad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etpassw"
-        android:layout_alignStart="@+id/etpassw"
         android:layout_below="@+id/etnomc"
         android:layout_marginTop="46dp"
         android:ems="10"
         android:hint="Escriba Edad"
         android:inputType="number"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_alignLeft="@+id/btregist"
+        android:layout_alignStart="@+id/btregist"
+        android:layout_alignRight="@+id/btregist"
+        android:layout_alignEnd="@+id/btregist" />
 
     <Spinner
         android:id="@+id/spiusu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/etpassw"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignStart="@+id/etpassw"
         android:layout_below="@+id/etpassw"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="13dp"
+        android:layout_alignRight="@+id/etpassw"
+        android:layout_alignEnd="@+id/etpassw" />
 
 </RelativeLayout>

@@ -27,6 +27,8 @@
         <activity
             android:name=".DatosEventoActivity"
             android:theme="@style/AppThemeDefault" />
+        <activity android:name=".perfil"></activity>
+=======
         <activity android:name=".MenuReportes" />
         <activity android:name=".EditarEvento" />
 
@@ -36,6 +38,7 @@
         <activity android:name=".ViewStaff" />
         <activity android:name=".EditarJugadores"></activity>
 >>>>>>> c809736c59ccd0afa608b0dbf63a9cab5aafe7dd
+>>>>>>> 83e02b4fd5a78b136ddc0237b511a4b0375ca6c9
     </application>
 
 </manifest>

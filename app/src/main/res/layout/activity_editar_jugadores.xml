@@ -12,114 +12,112 @@
         android:layout_height="wrap_content"
         android:columnCount="2"
         android:rowCount="11"
-        android:layout_margin="5dp">
+        android:layout_margin="10dp">
         <TextView
             android:text="Equipo 1"
             android:textStyle="bold"
             android:textSize="15dp"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
-            android:layout_columnWeight="1" />
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"/>
         <TextView
             android:textSize="15dp"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:text="Equipo 2"
             android:textStyle="bold"
+            android:layout_width="wrap_content"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="1. Jugador"
-            android:layout_columnWeight="1"/>
+            android:text="1. Jugador1"
+
+            android:layout_columnWeight="2"/>
         <EditText
-            android:hint="1. Jugador"
-            android:layout_columnWeight="1"/>
+            android:text="1. Jugador"
+            android:layout_columnWeight="2"/>
 
         <EditText
-            android:hint="2. Jugador"
+            android:text="2. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="2"/>
+        <EditText
+            android:text="2. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="2"/>
+        <EditText
+            android:text="3. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="2. Jugador"
+            android:text="3. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="3. Jugador"
+            android:text="4. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="3. Jugador"
+            android:text="4. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="4. Jugador"
+            android:text="5. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="4. Jugador"
+            android:text="5. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="5. Jugador"
+            android:text="6. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="5. Jugador"
+            android:text="6. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="6. Jugador"
+            android:text="7. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="6. Jugador"
+            android:text="7. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="7. Jugador"
+            android:text="8. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="7. Jugador"
+            android:text="8. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="8. Jugador"
+            android:text="9. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="8. Jugador"
+            android:text="9. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="9. Jugador"
+            android:text="10. Jugador1"
             android:layout_column="0"
             android:layout_columnWeight="1"/>
         <EditText
-            android:hint="9. Jugador"
+            android:text="10. Jugador"
             android:layout_column="1"
             android:layout_columnWeight="1"/>
-        <EditText
-            android:hint="10. Jugador"
-            android:layout_column="0"
-            android:layout_columnWeight="1"/>
-        <EditText
-            android:hint="10. Jugador"
-            android:layout_column="1"
-            android:layout_columnWeight="1"/>
-        <EditText
-            android:hint="11. Jugador"
-            android:layout_column="0"
-            android:layout_columnWeight="1"/>
-        <EditText
-            android:hint="11. Jugador"
-            android:layout_column="1"
-            android:layout_columnWeight="1"/>
+
         <Button
+            android:id="@+id/guardarBtn"
             android:layout_columnSpan="2"
             android:layout_columnWeight="1"
             android:text="Guardar"
             android:background="@color/colorAccent"
             android:textAlignment="center"
-            android:textSize="10dp"
-            android:layout_height="20dp" />
+            android:textSize="10dp" />
 
 
     </GridLayout>
