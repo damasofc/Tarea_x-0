@@ -30,7 +30,8 @@
             android:name="res.layout.Registro"
             android:label="@string/title_activity_registro"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Registro"></activity>
+        <activity android:name=".Registro" />
+        <activity android:name=".perfil"></activity>
     </application>
 
 </manifest>
