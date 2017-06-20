@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     Button registrate;
     TextView nombresi;
     TextView passworde;
+    static Usuario usuarioActivo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
     }
     private void initComponents(){
-        Usuario nw = new Usuario("admin","supersecreto","Administrador",20);
+
+
+        Usuario nw = new Usuario("admin","sp","Administrador",20);
         Validaciones.usuarioss.add(nw);
         entrar = (Button)findViewById(R.id.button2);
         registrate =(Button)findViewById(R.id.button);
@@ -36,13 +40,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nombresi.getText().toString().equals("")&&passworde.getText().toString().equals("")){
-                    Toast.makeText(MainActivity.this,"Usuario o contrasena incorrectas",Toast.LENGTH_LONG).show();
-                }else{
 
 
+
+                    Toast.makeText(MainActivity.this,"Por favor llene los campos",Toast.LENGTH_LONG).show();
+                }else if(Validaciones.comprobarRegistro(nombresi.getText().toString(),passworde.getText().toString())){
+
+                usuarioActivo=Validaciones.buscarUsuario(nombresi.getText().toString());
                 Intent intent = new Intent(MainActivity.this, MenuMainActivity.class);
                 startActivity(intent);
                 finish();}
+                else{
+                    Toast.makeText(MainActivity.this,"Usuario o contrasena incorrectas",Toast.LENGTH_LONG).show();
+                }
+
 
             }
         });

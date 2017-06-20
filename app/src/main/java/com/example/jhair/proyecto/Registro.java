@@ -50,6 +50,7 @@ public class Registro extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Registro.this,MainActivity.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -64,22 +65,45 @@ public class Registro extends AppCompatActivity {
         registrarte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String usuario1=usuario.getText().toString();
+                String contra1=contra.getText().toString();
+                String nombre1=nomcompleto.getText().toString();
+                int edad1=Integer.valueOf(edad.getText().toString());
+
+
             if(usuario.getText().toString().equals("")||contra.getText().toString().equals("")||
                         nomcompleto.getText().toString().equals("")||edad.getText().toString().equals("")){
                 Toast.makeText(Registro.this,"Debe llenar todos los campos",Toast.LENGTH_LONG).show();
 
             }else {
-                boolean comprobar= Validaciones.comprobarusuarionormal(usuario.getText().toString());
-                    if(comprobar==true){
-                        Toast.makeText(Registro.this,"Jugador Ya existe",Toast.LENGTH_LONG).show();
-                    }else if(comprobar==false){
+                if(Validaciones.comprobarUsuario(usuario.getText().toString())){
+                    Toast.makeText(Registro.this,"Usuario ya en uso,escriba otro",Toast.LENGTH_LONG).show();
 
-                        Validaciones.crearusuarionormal(usuario.getText().toString(),contra.getText().toString());
-                        Toast.makeText(Registro.this,"Usuario  Creado",Toast.LENGTH_LONG).show();
+                }else{
+                    String tipo=tipusuarios.getSelectedItem().toString();
+                    switch (tipo){
+                        case "Normal":
+                            UsuarioNormal usuarioN =new UsuarioNormal(usuario1,contra1,nombre1,edad1);
+                            Validaciones.addUsuario(usuarioN);
+                            Toast.makeText(Registro.this,"A creado un Usuario Normal",Toast.LENGTH_LONG).show();
+
+                            break;
+
+                        case "Limitado":
+                            UsuarioLimitado usuarioL = new UsuarioLimitado(usuario1,contra1,nombre1,edad1);
+                            Validaciones.addUsuario(usuarioL);
+                            Toast.makeText(Registro.this,"A creado un usuario Limitado",Toast.LENGTH_LONG).show();
+
+                            break;
+
                     }
+                    Intent intent = new Intent(Registro.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
 
 
 
+                }
             }
 
 
