@@ -20,6 +20,10 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
+    public Evento(){
+
+    }
+
     public Evento(int codigo, String titulo, Calendar fecha, double montoPagar, String descripcion) {
         this.codigo = codigo;
         this.titulo = titulo;

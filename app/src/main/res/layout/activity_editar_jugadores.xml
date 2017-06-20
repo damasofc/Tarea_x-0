@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jhair.proyecto.EditarJugadores">
+
+    <GridLayout
+        android:id="@+id/jugadoresGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="11"
+        android:layout_margin="10dp">
+        <TextView
+            android:text="Equipo 1"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"/>
+        <TextView
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Equipo 2"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="1. Jugador1"
+
+            android:layout_columnWeight="2"/>
+        <EditText
+            android:text="1. Jugador"
+            android:layout_columnWeight="2"/>
+
+        <EditText
+            android:text="2. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="2"/>
+        <EditText
+            android:text="2. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="2"/>
+        <EditText
+            android:text="3. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="3. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="4. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="4. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="5. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="5. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="6. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="6. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="7. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="7. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="8. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="8. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="9. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="9. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="10. Jugador1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"/>
+        <EditText
+            android:text="10. Jugador"
+            android:layout_column="1"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/guardarBtn"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:text="Guardar"
+            android:background="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+
+
+    </GridLayout>
+
+
+</RelativeLayout>

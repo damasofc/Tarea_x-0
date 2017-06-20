@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jhair.proyecto.MenuReportes">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:textAlignment="center"
+        android:text="Menu Reportes"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="21dp" />
+    <LinearLayout
+        android:padding="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_list_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Listar Eventos realizados"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"
+            android:layout_below="@+id/textView" />
+
+        <Button
+            android:id="@+id/button_list_future_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar eventos futuros"
+            android:layout_marginTop="14dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"
+            android:layout_below="@+id/button_list_events" />
+
+        <Button
+            android:id="@+id/button_canceled_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Listar Eventos Cancelados"
+            android:layout_below="@+id/button_list_future_events"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"/>
+
+        <Button
+            android:id="@+id/button_date_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_canceled_events"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="Ingreso generado por fecha"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"/>
+
+        <Button
+            android:id="@+id/button_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_date_input"
+            android:layout_marginTop="18dp"
+            android:text="Ver perfil del usuario"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/blanco"/>
+
+        <Button
+            android:id="@+id/button_return_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_profile"
+            android:layout_marginTop="18dp"
+            android:text="Regresar al menu Principal"
+            android:background="@color/colorAccent"
+            android:textColor="@color/blanco"/>
+    </LinearLayout>
+</RelativeLayout>

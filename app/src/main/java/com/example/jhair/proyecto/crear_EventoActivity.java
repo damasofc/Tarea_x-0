@@ -73,11 +73,12 @@ public class crear_EventoActivity extends AppCompatActivity {
                     switch (selectItm) {
                         case "Musical":
                         case "Deportivo":
+                            intent.putExtra("FUENTE",1);
                             startActivity(intent);
                             finish();
                             break;
                         default:
-                            if (MainClass.existeEvento(Integer.parseInt(codigo.getText().toString()))) {
+                            if (MainClass.existeEvento(Integer.parseInt(codigo.getText().toString())) || MainClass.buscarEventoCancelado(Integer.parseInt(codigo.getText().toString())) != null) {
                                 Toast.makeText(crear_EventoActivity.this, "Este codigo de evento ya existe, escriba otro", Toast.LENGTH_SHORT).show();
                             } else {
                                 EventoReligioso er = new EventoReligioso(Integer.parseInt(codigo.getText().toString()), titulo.getText().toString(), ((DatePickerFragment) newFragment).getSc(), mont, descripcion.getText().toString());

@@ -43,4 +43,31 @@ public class MainClass {
         }
         return null;
     }
+    public static Evento buscarEventoCancelado(int cod) {
+        for (Evento e : eventosCancelados) {
+            if (e.getCodigo() == cod) {
+                return e;
+            }
+        }
+        return null;
+    }
+
+    public static String formatMontoPago(double i){
+        String monto = String.valueOf(i);
+        int val = 0;
+        for (int m = monto.length()-1; m >= 0;m--){
+            if(monto.charAt(m) == '.'){
+                val = m;
+            }
+        }
+        String mon = monto.substring(0,val);
+        int contador = 1;
+        for (int s = mon.length()-1; s > 0;s--){
+            if(contador % 3 == 0){
+                mon = mon.substring(0,s)+","+mon.substring(s,mon.length());
+            }
+            contador++;
+        }
+        return mon + monto.substring(val);
+    }
 }
