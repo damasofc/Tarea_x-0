@@ -13,6 +13,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
+import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
+import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.clases.EventoReligioso;
 
 import java.util.Calendar;
@@ -83,6 +86,12 @@ public class crear_EventoActivity extends AppCompatActivity {
                             } else {
                                 EventoReligioso er = new EventoReligioso(Integer.parseInt(codigo.getText().toString()), titulo.getText().toString(), ((DatePickerFragment) newFragment).getSc(), mont, descripcion.getText().toString());
                                 MainClass.añadirEvento(er);
+                                Usuario usu = MainActivity.usuarioActivo;
+                                if(usu instanceof UsuarioAdmin){
+                                    UsuarioAdmin.agregarEventoAdmin(er);
+                                }else if(usu instanceof UsuarioNormal){
+                                    UsuarioNormal.agregarEventoNormal(er);
+                                }
                                 Toast.makeText(crear_EventoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
                                 intent = new Intent(crear_EventoActivity.this, MenuMainActivity.class);
                                 startActivity(intent);
