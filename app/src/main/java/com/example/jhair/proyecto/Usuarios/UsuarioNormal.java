@@ -10,6 +10,7 @@ public class UsuarioNormal extends Usuario {
 
     private ArrayList<String> eventosnormales;
 
+
     public UsuarioNormal(String usuario, String contra, String nomcompleto, int edad) {
         super(usuario, contra, nomcompleto, edad);
 
