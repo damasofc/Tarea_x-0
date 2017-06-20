@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
+import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
+import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.clases.EventoMusical;
 
 public class CrearEvent_MusicalActivity extends AppCompatActivity {
@@ -43,6 +46,12 @@ public class CrearEvent_MusicalActivity extends AppCompatActivity {
                 EventoMusical em = new EventoMusical(code,titulo,fecha,monto,descript,tipodeMusica);
                 if(MainClass.existeEvento(em.getCodigo()) == false || MainClass.buscarEventoCancelado(em.getCodigo())== null){
                     MainClass.añadirEvento(em);
+                    Usuario usu = MainActivity.usuarioActivo;
+                    if(usu instanceof UsuarioAdmin){
+                        UsuarioAdmin.agregarEventoAdmin(em);
+                    }else if(usu instanceof UsuarioNormal){
+                        UsuarioNormal.agregarEventoNormal(em);
+                    }
                     Toast.makeText(CrearEvent_MusicalActivity.this,"Evento creado exitosamente",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(CrearEvent_MusicalActivity.this,MenuMainActivity.class);
                     startActivity(intent);

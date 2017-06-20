@@ -12,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
+import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
+import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.clases.Evento;
 import com.example.jhair.proyecto.clases.EventoDeportivo;
 
@@ -84,6 +87,12 @@ public class CrearEvent_DeportivoActivity extends AppCompatActivity {
                         } else {
                             EventoDeportivo ed = new EventoDeportivo(codigo, titulo, fecha, monto, descript, tiposport, equipo1.getText().toString(), equipo2.getText().toString());
                             MainClass.añadirEvento(ed);
+                            Usuario usu = MainActivity.usuarioActivo;
+                            if(usu instanceof UsuarioAdmin){
+                                UsuarioAdmin.agregarEventoAdmin(ed);
+                            }else if(usu instanceof UsuarioNormal){
+                                UsuarioNormal.agregarEventoNormal(ed);
+                            }
                             Toast.makeText(CrearEvent_DeportivoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(CrearEvent_DeportivoActivity.this, MenuMainActivity.class);
                             startActivity(intent);
