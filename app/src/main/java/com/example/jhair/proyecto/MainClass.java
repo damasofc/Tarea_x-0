@@ -4,7 +4,7 @@ import com.example.jhair.proyecto.clases.Evento;
 
 import java.util.ArrayList;
 
-public class MainClass {
+public final class MainClass {
     public static ArrayList<Evento> eventos = new ArrayList<>();
     public static ArrayList<Evento> eventosCancelados = new ArrayList<>();
 

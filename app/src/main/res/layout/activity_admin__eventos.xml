@@ -28,7 +28,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn_eliminarEvent"
             android:theme="@style/BotonRaised"
-            android:text="Eliminar evento"
+            android:text="Cancelar evento"
             android:layout_width="match_parent"
             android:layout_height="65dp" />
         <Button

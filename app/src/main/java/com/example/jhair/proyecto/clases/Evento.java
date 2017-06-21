@@ -4,7 +4,7 @@ package com.example.jhair.proyecto.clases;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class Evento {
+public  class Evento {
     protected int codigo;
     protected String descripcion;
     protected String titulo;

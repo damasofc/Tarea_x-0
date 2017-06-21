@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jhair.proyecto.clases.Evento;
@@ -25,6 +26,8 @@ public class EditarJugadores extends AppCompatActivity {
     int fuente;
     Button guardar;
     EventoDeportivo eve;
+    TextView txtEquip1;
+    TextView txtEquip2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,8 @@ public class EditarJugadores extends AppCompatActivity {
         initComponents();
     }
     private void initComponents(){
+        txtEquip1 = (TextView) findViewById(R.id.txtEquip1);
+        txtEquip2 = (TextView) findViewById(R.id.txtEquip2);
         fuente = getIntent().getExtras().getInt("fuente");
         guardar = (Button)findViewById(R.id.guardarBtn);
         codigo = getIntent().getExtras().getInt("codEvent");
@@ -90,10 +95,10 @@ public class EditarJugadores extends AppCompatActivity {
         }
     }
 
-    //TODO: por aca voy, editando que se coloquen los textos de cada jugador.
     private void setDatos(int equipo){
 
         if(equipo == 1){
+            txtEquip1.setText(eve.getEquipo1());
             if(jugadors1.size() == 0){
                 for(int i = 0; i < arr.length;i++) {
                     for (int m = 0; m < arr[i].length; m++) {
@@ -120,6 +125,7 @@ public class EditarJugadores extends AppCompatActivity {
 
             }
         }else{
+            txtEquip2.setText(eve.getEquipo2());
             if(jugadors2.size() == 0){
                 for(int i = 0; i < arr.length;i++) {
                     for (int m = 0; m < arr[i].length; m++) {

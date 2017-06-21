@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
+import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
+import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.clases.Evento;
 import com.example.jhair.proyecto.clases.EventoDeportivo;
 import com.example.jhair.proyecto.clases.EventoMusical;
@@ -20,6 +23,7 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
     Button cancelar;
     EditText codigoCancel;
     TextView titulo;
+    Usuario usu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,11 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
         codigoCancel = (EditText) findViewById(R.id.codigoEvento);
         cancelar = (Button)findViewById(R.id.cancelEvento);
         titulo = (TextView)findViewById(R.id.titulo_Eliminar);
+        if(MainActivity.usuarioActivo instanceof UsuarioNormal){
+            usu = (UsuarioNormal)MainActivity.usuarioActivo;
+        }else{
+            usu = (UsuarioAdmin)MainActivity.usuarioActivo;
+        }
         /*
         Este if que recoge un intent, sirve para ahorrarme de hacer un activity mas para cuando le de click en el
         boton de editar evento, asi simplemente le cambio el nombre del titulo y del boton
@@ -64,6 +73,9 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
                     int codEvent = codigoCancel.length() > 0 ? Integer.parseInt(codigoCancel.getText().toString()) : -1;
                     if (MainClass.existeEvento(codEvent)) {
                         Evento eve = MainClass.buscarEvento(codEvent);
+                        //TODO: aca me falta colocar un if que compruebe si ese codigo de evento,
+                        //TODO: es el de algun evento creado por el usuario activo, ya que solo el
+                        //TODO: USUARIO QUE creo el evento, puede eliminarlo
                         Calendar hoy = Calendar.getInstance();
                         if (eve.getFecha().after(hoy)) {
                             //en este if, reviso si el evento es evento musical o deportivo,

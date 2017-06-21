@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.jhair.proyecto.Usuarios.UsuarioLimitado;
 
 public class admin_EventosActivity extends AppCompatActivity {
     FloatingActionButton btn;
@@ -24,19 +27,27 @@ public class admin_EventosActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(admin_EventosActivity.this, crear_EventoActivity.class);
-                startActivity(intent);
-                finish();
+                if(MainActivity.usuarioActivo instanceof UsuarioLimitado) {
+                    Toast.makeText(admin_EventosActivity.this, "No puede acceder a crear un evento, ya que es un usuario Limitado", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(admin_EventosActivity.this, crear_EventoActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         btn_eliminar = (Button) findViewById(R.id.btn_eliminarEvent);
         btn_eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(admin_EventosActivity.this,Eliminar_EventoActivity.class);
-                intent.putExtra("FUENTE",2);
-                startActivity(intent);
-                finish();
+                if(MainActivity.usuarioActivo instanceof UsuarioLimitado) {
+                    Toast.makeText(admin_EventosActivity.this, "No puede acceder a eliminar un evento, ya que es un usuario Limitado", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(admin_EventosActivity.this, Eliminar_EventoActivity.class);
+                    intent.putExtra("FUENTE", 2);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         btn_Editar = (Button)findViewById(R.id.btn_editar);
@@ -48,10 +59,14 @@ public class admin_EventosActivity extends AppCompatActivity {
                 para comprobar cual es la fuente del parametro que le mando, si es 1 entonce viene del boton editar y cambia
                 los textos
                  */
-                Intent intent = new Intent(admin_EventosActivity.this,Eliminar_EventoActivity.class);
-                intent.putExtra("FUENTE",1);
-                startActivity(intent);
-                finish();
+                if(MainActivity.usuarioActivo instanceof UsuarioLimitado){
+                    Toast.makeText(admin_EventosActivity.this,"No puede acceder a editar un evento, ya que es un usuario Limitado",Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(admin_EventosActivity.this, Eliminar_EventoActivity.class);
+                    intent.putExtra("FUENTE", 1);
+                    startActivity(intent);
+                    finish();
+                }
 
             }
         });
