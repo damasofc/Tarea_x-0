@@ -76,33 +76,37 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
                         //TODO: aca me falta colocar un if que compruebe si ese codigo de evento,
                         //TODO: es el de algun evento creado por el usuario activo, ya que solo el
                         //TODO: USUARIO QUE creo el evento, puede eliminarlo
-                        Calendar hoy = Calendar.getInstance();
-                        if (eve.getFecha().after(hoy)) {
-                            //en este if, reviso si el evento es evento musical o deportivo,
-                            // porque si es Religioso, no se hace ningun cobro adicional al cancelarlo
-                            if (eve instanceof EventoDeportivo || eve instanceof EventoMusical) {
+                        if(comprobarEventoUser()) {
+                            Calendar hoy = Calendar.getInstance();
+                            if (eve.getFecha().after(hoy)) {
+                                //en este if, reviso si el evento es evento musical o deportivo,
+                                // porque si es Religioso, no se hace ningun cobro adicional al cancelarlo
+                                if (eve instanceof EventoDeportivo || eve instanceof EventoMusical) {
                             /*
                             Este gran IF, es el que comprueba si el dia que se quiere cancelar el evento, es un dia antes del evento, porque si es asi
                             se les cobra el 50% del monto establecido
                              */
-                                if (eve.getFecha().get(Calendar.YEAR) == hoy.get(Calendar.YEAR) &&
-                                        eve.getFecha().get(Calendar.MONTH) == hoy.get(Calendar.MONTH) &&
-                                        (eve.getFecha().get(Calendar.DAY_OF_MONTH) - hoy.get(Calendar.DAY_OF_MONTH) == 1)) {
-                                    eve.setMontoPagar(eve.getMontoPagar() / 2);
-                                    Toast ts = Toast.makeText(Eliminar_EventoActivity.this, "Debera pagar el 50% por indemnizacion por cancelacion de un dia antes", Toast.LENGTH_LONG);
-                                    ts.setGravity(Gravity.TOP, 0, 0);
-                                    ts.show();
+                                    if (eve.getFecha().get(Calendar.YEAR) == hoy.get(Calendar.YEAR) &&
+                                            eve.getFecha().get(Calendar.MONTH) == hoy.get(Calendar.MONTH) &&
+                                            (eve.getFecha().get(Calendar.DAY_OF_MONTH) - hoy.get(Calendar.DAY_OF_MONTH) == 1)) {
+                                        eve.setMontoPagar(eve.getMontoPagar() / 2);
+                                        Toast ts = Toast.makeText(Eliminar_EventoActivity.this, "Debera pagar el 50% por indemnizacion por cancelacion de un dia antes", Toast.LENGTH_LONG);
+                                        ts.setGravity(Gravity.TOP, 0, 0);
+                                        ts.show();
 
+                                    }
                                 }
+                                MainClass.eventosCancelados.add(eve);
+                                MainClass.borrarEvento(codEvent);
+                                Toast.makeText(Eliminar_EventoActivity.this, "El evento " + eve.getTitulo() + " ha sido cancelado", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(Eliminar_EventoActivity.this, MenuMainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toast.makeText(Eliminar_EventoActivity.this, "El evento no puede ser cancelado porque ya paso", Toast.LENGTH_SHORT).show();
                             }
-                            MainClass.eventosCancelados.add(eve);
-                            MainClass.borrarEvento(codEvent);
-                            Toast.makeText(Eliminar_EventoActivity.this, "El evento " + eve.getTitulo() + " ha sido cancelado", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(Eliminar_EventoActivity.this, MenuMainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            Toast.makeText(Eliminar_EventoActivity.this, "El evento no puede ser cancelado porque ya paso", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(Eliminar_EventoActivity.this,"No puede acceder a este Evento porque usted no lo creo", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(Eliminar_EventoActivity.this, codEvent == -1 ? "Porfavor escriba un codigo de evento" : "No hay ningun evento con ese codigo", Toast.LENGTH_SHORT).show();
