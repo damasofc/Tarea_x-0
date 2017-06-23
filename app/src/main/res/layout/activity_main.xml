@@ -1,18 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/imagenfondo"
+    android:alpha="0.8"
+    android:id="@+id/mainLinear"
+    android:orientation="vertical"
     tools:context="com.damasofc.tarea_x_0.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TituloApp"
+                android:textSize="40dp"
+                android:fontFamily="cursive"
+                android:textColor="@color/colorNegro"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/turnoPlayer"
+                android:textSize="35dp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textColor="@color/colorNegro"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+            <ImageButton
+                android:id="@+id/btn1"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btn2"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btn3"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+            <ImageButton
+                android:id="@+id/btn4"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btn5"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btn6"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+            <ImageButton
+                android:id="@+id/btn7"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btn8"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btn9"
+                android:layout_width="180dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent" />
+    </LinearLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0-Wins"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:fontFamily="cursive"
+                    android:textColor="@color/colorNegro" />
+                <TextView
+                    android:text="X-Wins"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:fontFamily="cursive"
+                    android:textColor="@color/colorNegro"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Draw"
+                    android:textSize="30dp"
+                    android:fontFamily="cursive"
+                    android:textColor="@color/colorNegro"
+                    android:textStyle="bold"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ganados0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="40dp"
+                    android:layout_weight="2"
+                    android:fontFamily="cursive"
+                    android:textColor="@color/colorNegro" />
+                <TextView
+                    android:id="@+id/ganadosX"
+                    android:textSize="30dp"
+                    android:text=""
+                    android:fontFamily="cursive"
+                    android:textColor="@color/colorNegro"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/empates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="30dp"
+                    android:fontFamily="cursive"
+                    android:textColor="@color/colorNegro"
+                    android:textStyle="bold"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/jugarNuevo"
+                android:layout_marginRight="15dp"
+                android:text="Jugar de Nuevo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+</LinearLayout>
